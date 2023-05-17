@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="ThemesLay">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!--title tag for page -->
+    <title>Flight World - My Account Booking Page</title>
+</head>
+
+<body>
+    <!-- preloader area -->
+    <div class="preloader">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="load-spinner">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal box for Logout Profile-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="p-5 text-center">
+                    <span class="d-inline-flex p-4 rounded-circle border mb-3 border-success"><i
+                            class="bi bi-check-lg fs-2 text-success lh-1"></i></span>
+                    <p class="fs-2 fw-bold">Logout Successful</p>
+                    <p class="font-medium">You have successfully logged out.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pagewrap modify-search">
+        <div class="head-wrapper">
+            <!-- page header section -->
+            <header class="header header-light">
+                <div class="container">
+                    <div class="sideMenu">
+                        <button type="button" class="btn rounded-0 btn-left toggle-slide-right"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop"
+                            aria-controls="offcanvasWithBackdrop">
+                            <i class="bi bi-text-center"></i>
+                        </button>
+                        <div class="offcanvas offcanvas-start theme-bg-secondary border-0" tabindex="-1"
+                            id="offcanvasWithBackdrop">
+                            <div class="p-0">
+                                <span class="p-0" id="offcanvasLabel"></span>
+                                <button type="button" class="btn-close custom-btn-close theme-text-white"
+                                    data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <i class="bi bi bi-x-lg"></i>
+                                </button>
+                            </div>
+                            <!-- left side menu section -->
+                            <div class="offcanvas-body p-0 mt-5">
+                                <ul class="menuList nav flex-column w-100">
+                                    <li class="nav-item"><a href="index.html" class="position-relative card-effect">
+                                            <div class="card-box"></div>
+                                            <i class="bi bi-house-fill ps-4 pe-2"></i>Home
+                                        </a>
+                                    </li>
+                                    <li class="nav-item"><a href="deals-offers.html"
+                                            class="position-relative card-effect">
+                                            <div class="card-box"></div>
+                                            <i class="bi bi-chat-square-heart-fill ps-4 pe-2"></i>Specials Deals
+                                        </a>
+                                    </li>
+                                    <li class="nav-item"><a href="#travelDeals" class="position-relative card-effect">
+                                            <div class="card-box"></div>
+                                            <i class="bi bi-bookmark-check-fill ps-4 pe-2"></i>Travel Deals
+                                        </a>
+                                    </li>
+                                    <li class="nav-item"><a href="#featuredFlights"
+                                            class="position-relative card-effect">
+                                            <div class="card-box"></div>
+                                            <i class="bi bi-bell-fill ps-4 pe-2"></i>Featured Flights
+                                        </a>
+                                    </li>
+                                    <li class="nav-item"><a href="#howWork" class="position-relative card-effect">
+                                            <div class="card-box"></div>
+                                            <i class="bi bi-shield-fill-exclamation ps-4 pe-2"></i>How it Work
+                                        </a>
+                                    </li>
+                                    <li class="nav-item"><a href="about.html" class="position-relative card-effect">
+                                            <div class="card-box"></div>
+                                            <i class="bi bi-balloon-fill ps-4 pe-2"></i>About Us
+                                        </a>
+                                    </li>
+                                    <li class="nav-item"><a href="contact.html" class="position-relative card-effect">
+                                            <div class="card-box"></div>
+                                            <i class="bi bi-arrows-move ps-4 pe-2"></i>Contact Us
+                                        </a>
+                                    </li>
+                                    <li class="nav-item"><a href="blog.html" class="position-relative card-effect">
+                                            <div class="card-box"></div>
+                                            <i class="bi bi-arrow-right-circle-fill ps-4 pe-2"></i>Blogs
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="mt-5">
+                                    <p class="d-inline-flex theme-text-white">
+                                        <i class="bi bi-telephone-fill h4 theme-text-white ps-4 pe-2"></i>
+                                        24×7 Customer Support <br> 1800-313-5699
+                                    </p>
+                                </div>
+                                <div class="mt-3">
+                                    <p class="d-inline-flex theme-text-white">
+                                        <i class="bi bi-envelope-fill h4 theme-text-white ps-4 pe-2"></i>
+                                        Email us <br> support@example.com
+                                    </p>
+                                </div>
+                                <p class="ps-4 mb-0 mt-5 theme-text-white">Social Network</p>
+                                <div class="d-flex social mt-3 ps-4">
+                                    <a href="#" class="h4 pe-3"><i class="bi bi-facebook"></i></a>
+                                    <a href="#" class="h4 px-3"><i class="bi bi-twitter"></i></a>
+                                    <a href="#" class="h4 px-3"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="h4 px-3"><i class="bi bi-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-expand-md navbar-light py-0 px-0">
+                        <a class="navbar-brand ms-5" href="index.html"><img src="assets/images/logo.png"
+                                alt="Brand Logo" title="Brand Logo" class="img-fluid"></a>
+                        <button class="navbar-toggler px-1 btn rounded-0" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <div class="dropdown-container">
+                                        <div class="dropdown-toggle click-dropdown">
+                                            <i class="bi bi-person-circle"></i> Hey Kislay
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="nav-item"><a class="dropdown-item"
+                                                        href="my-account-profile.html">My Profile</a>
+                                                </li>
+                                                <li class="nav-item"><a class="dropdown-item"
+                                                        href="my-account-booking.html">My Booking</a>
+                                                </li>
+                                                <li class="nav-item"><a class="dropdown-item"
+                                                        href="my-account-wallet.html">My Wallet</a>
+                                                </li>
+                                                <li class="nav-item"><a class="dropdown-item" href="#"
+                                                        data-bs-toggle="modal" data-bs-target="#exampleModal">Logout</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <!-- review booking flight-->
+            <div class="flight-search">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-12 theme-text-white">
+                            <span class="fw-bold">My Account</span>
+                            <i class="bi bi-arrow-right m-3"></i>
+                            <span class="fw-bold">My Trips</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- body section -->
+        <div class="content-section">
+            <!-- flight result page - oneway start -->
+            <div class="theme-bg-white py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-2 mb-4 mb-md-0">
+                            <div class="d-flex flex-column theme-border-radius theme-bg-white theme-box-shadow">
+                                <a href="#upcominge" class="border-bottom p-3 theme-text-accent-one">
+                                    <i class="img-icon icon-upcoming me-2 align-middle"></i>Upcoming</a>
+                                <a href="#cancelled" class="border-bottom p-3 theme-text-accent-one"><i
+                                        class="img-icon icon-cancel me-2 align-middle"></i>Cancelled</a>
+                                <a href="#completed" class="border-bottom p-3 theme-text-accent-one"><i
+                                        class="img-icon icon-complete me-2 align-middle"></i>Completed</a>
+                                <a href="#failed" class="border-bottom p-3 theme-text-accent-one"><i
+                                        class="img-icon icon-fail me-2 align-middle"></i>Failed</a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-10">
+                            <!-- upcomming booking section -->
+                            <div class="theme-box-shadow theme-border-radius theme-bg-white mb-3" id="upcominge">
+                                <div class="row g-0">
+                                    <div class="col-12 col-md-12">
+                                        <div class="row g-0 align-items-center border-bottom p-3 align-self-center">
+                                            <div class="col-12 col-md-8 mb-3 mb-md-0">
+                                                <span class="d-flex fw-bold">
+                                                    <i class="img-icon icon-upcoming me-2 align-middle"></i>Upcoming
+                                                    Bookings</span>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="input-group">
+                                                    <span class="input-group-text bg-transparent" id="basic-addon1"><i
+                                                            class="bi bi-search"></i></span>
+                                                    <input type="text" class="form-control border-start-0"
+                                                        placeholder="Search a booking" aria-label="Username"
+                                                        aria-describedby="basic-addon1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- upcomming booking -->
+                                <div class="row g-0 px-3 ">
+                                    <div class="col-12 border-bottom p-2 p-md-5">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-shrink-0">
+                                                <img src="assets/images/icons/booking-baggage.png" alt="booking-baggage"
+                                                    class="img-fluid">
+                                            </div>
+                                            <div class="flex-grow-1 ms-5">
+                                                <span class="d-flex fs-5 fw-bold">Looks empty, you've no upcoming
+                                                    bookings.</span>
+                                                <span class="d-flex font-medium theme-text-accent-one my-3">When you
+                                                    book a
+                                                    trip, you will
+                                                    see
+                                                    your itinerary here.</span>
+                                                <button type="submit" class="btn btn-effect btn-book px-5">
+                                                    <span class="text-uppercase">Plan a Trip</span>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- cancel booking section -->
+                            <div class="theme-box-shadow theme-border-radius theme-bg-white mb-3" id="cancelled">
+                                <div class="row g-0">
+                                    <div class="col-12 col-md-12">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center border-bottom p-3 align-self-center">
+                                            <div class="mb-0">
+                                                <span class="d-flex ">
+                                                    <i class="img-icon icon-cancel me-2 align-middle"></i>
+                                                    <span class="d-flex flex-column">
+                                                        <span class="fw-bold">Cancelled Bookings</span>
+                                                        <span class="d-flex font-small">Your Cancelled booking(1)</span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- cancel booking -->
+                                <div class="row g-0 px-3 ">
+                                    <div class="col-12 border-bottom">
+                                        <!-- cancel booking list section -->
+                                        <div class="theme-box-shadow theme-border-radius theme-bg-white my-3">
+                                            <div class="row g-0">
+                                                <div class="col-12 col-md-12">
+                                                    <div
+                                                        class="row g-0 align-items-center border-bottom p-3 align-self-center">
+                                                        <div class="col-12 col-md-7 mb-3 mb-md-0">
+                                                            <span class="fw-bold">
+                                                                <span class="text-uppercase">Mumbai</span>
+                                                                <i class="bi bi-arrow-right mx-2"></i>
+                                                                <span class="text-uppercase">New Delhi</span>
+                                                            </span>
+                                                            <ul class="d-flex">
+                                                                <li class="font-small fw-bold text-warning">Cancelled on
+                                                                    15 Jun </li>
+                                                                <li class="font-small"><i
+                                                                        class="bi bi-circle-fill font-extra-small mx-2"></i>One
+                                                                    Way
+                                                                    Flight
+                                                                </li>
+                                                                <li class="font-small theme-text-accent-two"><i
+                                                                        class="bi bi-circle-fill font-extra-small mx-2"></i>Booking
+                                                                    ID
+                                                                    - NU211851007099216</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-12 col-md-5 text-md-end">
+                                                            <button type="submit" class="btn btn-effect btn-book px-3">
+                                                                <span class="text-uppercase">Manage Booking</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- cancel list booking -->
+                                            <div class="row g-0">
+                                                <div class="col-12 p-3">
+                                                    <div class="d-flex align-items-center font-medium">
+                                                        You cancelled all travelers(s) <span class="text-warning">Refund
+                                                            of <i class="bi bi-currency-dollar"></i> 404
+                                                            processed</span>
+                                                    </div>
+                                                    <ul class="refund-step">
+                                                        <li>
+                                                            <i class="bi bi-check-circle-fill fs-4 text-warning"></i>
+                                                            <span class="fw-bold">Booking cancelled</span>
+                                                            <span class="theme-text-accent-two">15 Jun 2019,
+                                                                18:06</span>
+                                                        </li>
+                                                        <li>
+                                                            <i class="bi bi-check-circle-fill fs-4 text-warning"></i>
+                                                            <span class="fw-bold">Booking cancelled</span>
+                                                            <span class="theme-text-accent-two">15 Jun 2019,
+                                                                18:06</span>
+                                                        </li>
+                                                        <li>
+                                                            <i class="bi bi-check-circle-fill fs-4 text-warning"></i>
+                                                            <span class="fw-bold">Booking cancelled</span>
+                                                            <span class="theme-text-accent-two">15 Jun 2019,
+                                                                18:06</span>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="d-flex mt-3">
+                                                        <span><i
+                                                                class="bi bi-circle-fill font-extra-small me-2"></i></span>
+                                                        <span class="font-small">404 has been processed in State Bank Of
+                                                            India<br>
+                                                            It takes 3 working days for refunds to reflect in State Bank
+                                                            Of
+                                                            India account.</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- complete booking section -->
+                            <div class="theme-box-shadow theme-border-radius theme-bg-white mb-3" id="completed">
+                                <div class="row g-0">
+                                    <div class="col-12 col-md-12">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center border-bottom p-3 align-self-center">
+                                            <div class="mb-0">
+                                                <span class="d-flex ">
+                                                    <i class="img-icon icon-complete me-2 align-middle"></i>
+                                                    <span class="d-flex flex-column">
+                                                        <span class="fw-bold">Completed Bookings</span>
+                                                        <span class="d-flex font-small">Your complete booking(2)</span>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- complete booking -->
+                                <div class="row g-0 px-3 ">
+                                    <div class="col-12 border-bottom">
+                                        <!-- complete booking list section -->
+                                        <div class="theme-box-shadow theme-border-radius theme-bg-white my-3">
+                                            <div class="row g-0">
+                                                <div class="col-12 col-md-12">
+                                                    <div
+                                                        class="row g-0 align-items-center border-bottom p-3 align-self-center">
+                                                        <div class="col-12 col-md-7 mb-3 mb-md-0">
+                                                            <span class="fw-bold">
+                                                                <span class="text-uppercase">Mumbai</span>
+                                                                <i class="bi bi-arrow-right mx-2"></i>
+                                                                <span class="text-uppercase">New Delhi</span>
+                                                            </span>
+                                                            <ul class="d-flex">
+                                                                <li class="font-small fw-bold">Completed</li>
+                                                                <li class="font-small"><i
+                                                                        class="bi bi-circle-fill font-extra-small mx-2"></i>One
+                                                                    Way
+                                                                    Flight
+                                                                </li>
+                                                                <li class="font-small theme-text-accent-two"><i
+                                                                        class="bi bi-circle-fill font-extra-small mx-2"></i>Booking
+                                                                    ID
+                                                                    - NU211851007099216</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-12 col-md-5 text-md-end">
+                                                            <button type="submit" class="btn btn-effect btn-book px-3">
+                                                                <span class="text-uppercase">View Booking</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- complete list booking -->
+                                            <div class="row g-0">
+                                                <div class="col-12 p-3">
+                                                    <ul class="row">
+                                                        <li class="col-12 col-md-3 mb-3 mb-md-0">
+                                                            <span
+                                                                class="d-flex flex-column font-medium theme-text-accent-two">
+                                                                <span class="fw-bold text-uppercase">From</span>
+                                                                <span class="theme-text-accent-one">28 Jul'21 Sun
+                                                                    <span class="theme-text-accent-two"> 04:01
+                                                                        PM</span></span>
+                                                                <span>Mumbai</span>
+                                                            </span>
+                                                        </li>
+                                                        <li class="col-12 col-md-3 mb-3 mb-md-0">
+                                                            <span
+                                                                class="d-flex flex-column font-medium theme-text-accent-two">
+                                                                <span class="fw-bold text-uppercase">To</span>
+                                                                <span class="theme-text-accent-one">28 Jul'21 Sun
+                                                                    <span class="theme-text-accent-two"> 04:01
+                                                                        PM</span></span>
+                                                                <span>Mumbai</span>
+                                                            </span>
+                                                        </li>
+                                                        <li class="col-12 col-md-3 mb-3 mb-md-0">
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0">
+                                                                    <img src="assets/images/icons/D-indigo.jpg"
+                                                                        alt="indigo" class="img-fluid">
+                                                                </div>
+                                                                <div class="flex-grow-1 ms-3 font-medium mb-2">
+                                                                    <span class="fw-bold">Indigo</span>
+                                                                    <span class="d-flex theme-text-accent-two">6E -
+                                                                        315</span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="font-medium"><i
+                                                                    class="bi bi-person-fill me-2"></i>Kislay
+                                                                Chhimwal</span>
+                                                        </li>
+                                                        <li class="col-12 col-md-3 text-md-end">
+                                                            <a href="#" class="font-medium"><i
+                                                                    class="bi bi-download me-2"></i>Download
+                                                                Invoice</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- complete booking list section -->
+                                        <div class="theme-box-shadow theme-border-radius theme-bg-white my-3">
+                                            <div class="row g-0">
+                                                <div class="col-12 col-md-12">
+                                                    <div
+                                                        class="row g-0 align-items-center border-bottom p-3 align-self-center">
+                                                        <div class="col-12 col-md-7 mb-3 mb-md-0">
+                                                            <span class="fw-bold">
+                                                                <span class="text-uppercase">New Delhi</span>
+                                                                <i class="bi bi-arrow-right mx-2"></i>
+                                                                <span class="text-uppercase">Mumbai</span>
+                                                            </span>
+                                                            <ul class="d-flex">
+                                                                <li class="font-small fw-bold">Completed</li>
+                                                                <li class="font-small"><i
+                                                                        class="bi bi-circle-fill font-extra-small mx-2"></i>One
+                                                                    Way
+                                                                    Flight
+                                                                </li>
+                                                                <li class="font-small theme-text-accent-two"><i
+                                                                        class="bi bi-circle-fill font-extra-small mx-2"></i>Booking
+                                                                    ID
+                                                                    - NU211851007099216</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-12 col-md-5 text-md-end">
+                                                            <button type="submit" class="btn btn-effect btn-book px-3">
+                                                                <span class="text-uppercase">View Booking</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- complete list booking -->
+                                            <div class="row g-0">
+                                                <div class="col-12 p-3">
+                                                    <ul class="row">
+                                                        <li class="col-12 col-md-3 mb-3 mb-md-0">
+                                                            <span
+                                                                class="d-flex flex-column font-medium theme-text-accent-two">
+                                                                <span class="fw-bold text-uppercase">From</span>
+                                                                <span class="theme-text-accent-one">28 Jul'21 Sun
+                                                                    <span class="theme-text-accent-two"> 04:01
+                                                                        PM</span></span>
+                                                                <span>Mumbai</span>
+                                                            </span>
+                                                        </li>
+                                                        <li class="col-12 col-md-3 mb-3 mb-md-0">
+                                                            <span
+                                                                class="d-flex flex-column font-medium theme-text-accent-two">
+                                                                <span class="fw-bold text-uppercase">To</span>
+                                                                <span class="theme-text-accent-one">28 Jul'21 Sun
+                                                                    <span class="theme-text-accent-two"> 04:01
+                                                                        PM</span></span>
+                                                                <span>Mumbai</span>
+                                                            </span>
+                                                        </li>
+                                                        <li class="col-12 col-md-3 mb-3 mb-md-0">
+                                                            <div class="d-flex align-items-center">
+                                                                <div class="flex-shrink-0">
+                                                                    <img src="assets/images/icons/D-indigo.jpg"
+                                                                        alt="indigo" class="img-fluid">
+                                                                </div>
+                                                                <div class="flex-grow-1 ms-3 font-medium mb-2">
+                                                                    <span class="fw-bold">Indigo</span>
+                                                                    <span class="d-flex theme-text-accent-two">6E -
+                                                                        315</span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="font-medium"><i
+                                                                    class="bi bi-person-fill me-2"></i>Kislay
+                                                                Chhimwal</span>
+                                                        </li>
+                                                        <li class="col-12 col-md-3 text-md-end">
+                                                            <a href="#" class="font-medium"><i
+                                                                    class="bi bi-download me-2"></i>Download
+                                                                Invoice</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- failed booking section -->
+                            <div class="theme-box-shadow theme-border-radius theme-bg-white mb-3" id="failed">
+                                <div class="row g-0">
+                                    <div class="col-12 col-md-12">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center border-bottom p-3 align-self-center">
+                                            <div class="mb-0">
+                                                <span class="d-flex ">
+                                                    <i class="img-icon icon-fail me-2 align-middle"></i>
+                                                    <span class="d-flex flex-column">
+                                                        <span class="fw-bold">Failed Bookings</span>
+                                                        <span class="d-flex font-small">Your Failed booking(1)</span>
+                                                    </span>
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- failed booking -->
+                                <div class="row g-0 px-3 ">
+                                    <div class="col-12 border-bottom">
+                                        <!-- failed booking list section -->
+                                        <div class="theme-box-shadow theme-border-radius theme-bg-white my-3">
+                                            <div class="row g-0">
+                                                <div class="col-12 col-md-12">
+                                                    <div
+                                                        class="row g-0 align-items-center border-bottom p-3 align-self-center">
+                                                        <div class="col-12 col-md-7 mb-3 mb-md-0">
+                                                            <span class="fw-bold text-danger">
+                                                                Your Flight Booking Failed
+                                                            </span>
+                                                            <ul class="d-flex">
+                                                                <li class="font-small fw-bold">One Way
+                                                                    Flight </li>
+                                                                <li class="font-small"><i
+                                                                        class="bi bi-circle-fill font-extra-small mx-2"></i>18
+                                                                    Jun 2019 - 19 Jun 2019
+                                                                </li>
+                                                                <li class="font-small theme-text-accent-two"><i
+                                                                        class="bi bi-circle-fill font-extra-small mx-2"></i>Booking
+                                                                    ID
+                                                                    - NU211851007099216</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-12 col-md-5 text-md-end">
+                                                            <button type="submit" class="btn btn-effect btn-book px-3">
+                                                                <span class="text-uppercase">View Booking</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- failed list booking -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- page footer section -->
+            <footer class="footer" id="footerSec">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 pt-5">
+                            <img src="assets/images/logoWhite.png" class="img-fluid" alt="Brand color white"
+                                title="Brand color white">
+                            <p class="text-justify pt-5">Flight World Travel Agent dashboard is a specialized travel
+                                service
+                                for organizations from flightworld.com</p>
+                            <p class="pt-lg-5">Get Latest Deals, Upcoming Flight Offers and Cheap Fare</p>
+                            <form class="form">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control py-3 rounded-0" id="inputPassword2"
+                                                placeholder="Enter your email address">
+                                            <button type="button"
+                                                class="btn btn-outline-light rounded-0 custom-btn-subscribe btn-effect">Subscribe</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="col-12 mt-5">
+                                <img src="assets/images/tafi.svg" class="img-fluid me-4" alt="tafi" title="tafi">
+                                <img src="assets/images/taai.svg" class="img-fluid" alt="taai" title="taai">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 pt-5">
+                            <img src="assets/images/iata.svg" class="img-fluid d-inline-flex" alt="IATA" title="IATA">
+                            <p class="fw-bold text-uppercase mb-0 ms-2 d-inline-flex">We are an IATA Certified travel
+                                agency
+                            </p>
+                            <div class="row">
+                                <div class="col-md-4 mt-5">
+                                    <p class="text-uppercase fw-bold mb-4">About Us</p>
+                                    <ul class="fl-menu">
+                                        <li class="nav-item"><a href="about.html">About</a></li>
+                                        <li class="nav-item"><a href="contact.html">Contact us</a></li>
+                                        <li class="nav-item"><a href="#">Bank Details</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 mt-5">
+                                    <p class="text-uppercase fw-bold">Legal</p>
+                                    <ul class="fl-menu">
+                                        <li class="nav-item"><a href="privacy.html">Privacy</a></li>
+                                        <li class="nav-item"><a href="#">T&C</a></li>
+                                        <li class="nav-item"><a href="#">Disclaimer</a></li>
+                                        <li class="nav-item"><a href="#">Privacy and Cookies</a></li>
+                                        <li class="nav-item"><a href="#">Legal</a></li>
+                                        <li class="nav-item"><a href="#">Help</a></li>
+                                        <li class="nav-item"><a href="#">Feedback</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 mt-5">
+                                    <p class="text-uppercase fw-bold">Company</p>
+                                    <ul class="fl-menu">
+                                        <li class="nav-item"><a href="#">Partner With Us</a></li>
+                                        <li class="nav-item"><a href="#">Services</a></li>
+                                        <li class="nav-item"><a href="#">Careers</a></li>
+                                        <li class="nav-item"><a href="#">Products</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-0 pt-5">
+                        <div class="col-12 border-top border-bottom">
+                            <div class="row">
+                                <div class="col-12 col-lg-4 text-start py-3">
+                                    <p class="d-inline-flex text-uppercase mb-0">Follow Us</p>
+                                    <div class="d-inline-flex social">
+                                        <a href="#" class="ps-3"><i class="bi bi-facebook"></i></a>
+                                        <a href="#" class="ps-3"><i class="bi bi-twitter"></i></a>
+                                        <a href="#" class="ps-3"><i class="bi bi-linkedin"></i></a>
+                                        <a href="#" class="ps-3"><i class="bi bi-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4 text-lg-center social py-3">
+                                    <p class="d-inline-flex text-uppercase mb-0">Support Center:</p>
+                                    <a href="#" class="botom-link">(769) 25698745</a>
+                                </div>
+                                <div class="col-12 col-lg-4 text-lg-end social py-3">
+                                    <a href="mailto:support@example.com" class="botom-link">support@example.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <p class="text-center py-5 mb-0 font-small">©2022 Flight World Pwt Lcd. All Rights Reserved.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <p id="back-top" class="back-to-top bg-dark" style="display: block;">
+                    <a href="#top"><i class="bi bi-chevron-up"></i></a>
+                </p>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--This page JavaScript -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--Data Calendar js -->
+    <script src="assets/js/jquery-ui.js"></script>
+    <!--Traveler counter js -->
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- animation aos library -->
+    <script src="assets/js/aos.js"></script>
+</body>
+
+</html>

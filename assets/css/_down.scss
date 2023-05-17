@@ -1,0 +1,204 @@
+// Dropdown menu css
+.dropdown-container {
+  position: relative;
+  min-width: 120px;
+
+  .dropdown-toggle::after {
+    opacity: 0;
+  }
+
+  .dropdown-toggle {
+    cursor: pointer;
+    position: relative;
+    color: $theme-color-white;
+    transition: all ease-in-out 0.3s;
+
+    label {
+      cursor: pointer;
+      width: 100%;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $theme-primary-color;
+    }
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    border-radius: 10px;
+    @include shadow-one;
+    margin-top: 17px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    background-color: $theme-color-white;
+    z-index: 10;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      border-radius: 0.5rem;
+      z-index: 10;
+
+      @media screen and (max-width:$break-medium) {
+        border-radius: 0rem;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      display: block;
+      padding: 5px 20px;
+      font-weight: 600;
+      @include shadow-one;
+      transition: all ease-in-out 0.3s;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.dropdown-menu,
+.dropdown-toggle {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    border: 5px solid;
+    border-top-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    margin-top: -2.5px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all ease-in-out 0.3s;
+    z-index: 10;
+  }
+}
+
+.dropdown-menu {
+  z-index: 10;
+  position: relative;
+
+  &::before {
+    z-index: -1;
+    transform: rotate(-135deg);
+    top: -4px;
+    border-color: $theme-color-white;
+    @include shadow-one;
+    display: none;
+  }
+}
+
+.dropdown-open {
+  .dropdown-menu.dropdown-active {
+    display: block;
+  }
+}
+
+.dropdown-container.dropdown-open {
+  .dropdown-toggle {
+    color: $theme-color-white;
+
+    &:before {
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+// css for small screen
+#navbarSupportedContent {
+  @media screen and (max-width:$break-medium) {
+    background-color: $theme-color-white;
+    position: absolute;
+    right: 0;
+    top: 3rem;
+    min-width: 12rem;
+  }
+
+  .nav-item {
+    @media screen and (max-width:$break-medium) {
+      padding: 1rem 0.5rem;
+    }
+  }
+
+  .dropdown-active {
+    @media screen and (max-width:$break-medium) {
+      position: relative;
+      border-radius: 0;
+      border: 0;
+    }
+
+    .nav-item {
+      @media screen and (max-width:$break-medium) {
+        padding: 0rem 0rem;
+      }
+    }
+  }
+
+  .dropdown-toggle {
+    @media screen and (max-width:$break-medium) {
+      color: $theme-accent-one;
+    }
+
+  }
+}
+
+.dropdown-open {
+  .dropdown-menu {
+    min-width: 5rem;
+    padding: 0 0;
+    width: auto;
+
+    a {
+      padding: 0.5rem 0.5rem;
+
+      &:active,
+      &:hover {
+        background-color: $theme-primary-color;
+      }
+    }
+  }
+}
+
+// corporate page css override
+#corporate-page {
+  .dropdown-container {
+    .dropdown-toggle {
+      color: $theme-secondary-color;
+      display: flex;
+      flex-direction: column;
+
+      &::before {
+        top: 70%;
+      }
+
+      &::after {
+        opacity: 0;
+        display: none;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $theme-primary-color;
+      }
+    }
+
+    .dropdown-menu {
+      margin-top: 0;
+    }
+  }
+
+}

@@ -1,0 +1,134 @@
+@import 'mixin';
+
+html {
+    font-size: 1rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: $body-color;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    text: {
+        align: center;
+        transform: lowercase;
+    }
+}
+
+.theme-bg-primary {
+    background-color: $theme-primary-color;
+}
+
+.theme-bg-secondary {
+    background-color: $theme-secondary-color;
+}
+
+.theme-bg-white {
+    background-color: $theme-color-white;
+}
+
+.theme-bg-light {
+    background-color: $theme-accent-two;
+}
+
+.theme-bg-accent-one {
+    background-color: $theme-accent-one;
+}
+
+.theme-bg-accent-two {
+    background-color: $theme-accent-two;
+}
+
+.theme-bg-accent-three {
+    background-color: $theme-accent-three;
+}
+
+.body-color {
+    background-color: $body-color;
+}
+
+.theme-text-white {
+    color: $theme-color-white;
+}
+
+.theme-text-primary {
+    color: $theme-primary-color;
+}
+
+.theme-text-secondary {
+    color: $theme-secondary-color;
+}
+
+.theme-text-accent-one {
+    color: $theme-accent-one;
+}
+
+.theme-text-accent-two {
+    color: $theme-accent-two;
+}
+
+.theme-text-accent-three {
+    color: $theme-accent-three;
+}
+
+.theme-box-shadow {
+    box-shadow: $theme-box-shadow;
+}
+
+.theme-text-shadow {
+    text-shadow: $theme-box-shadow;
+}
+
+.theme-border-radius {
+    border-radius: $theme-border-radius;
+}
+
+.theme-border-radius-top {
+    @include theme-border-radius-top
+}
+
+.theme-border-radius-bottom {
+    @include theme-border-radius-bottom
+}
+
+.font-extra-small {
+    font-size: $font-extra-small;
+}
+
+.font-small {
+    font-size: $font-small;
+}
+
+.font-medium {
+    font-size: $font-medium;
+}
+
+.max-1 {
+    max-width: 50rem;
+    margin: auto;
+}
+
+.btn-select {
+    position: relative;
+    border: 1px solid $theme-secondary-color;
+    color: $theme-secondary-color;
+    z-index: 1;
+}
+
+.btn-book {
+    position: relative;
+    background-color: $theme-secondary-color;
+    color: $theme-color-white;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.min-h58 {
+    min-height: 58px;
+}

@@ -1,0 +1,1111 @@
+// inner header css
+.header-light {
+    background-color: $theme-color-white;
+
+    .dropdown-toggle {
+        color: $theme-secondary-color;
+    }
+
+    .dropdown-container.dropdown-open {
+        .dropdown-toggle {
+            color: $theme-secondary-color;
+        }
+    }
+}
+
+// modify search engine css
+.modify-search {
+
+    .head-wrapper {
+        min-height: auto;
+    }
+
+    .flight-search {
+        background-color: $theme-secondary-color ;
+
+        .check-wrap {
+            color: $theme-color-white;
+
+            .checkmark {
+                border: 1px solid $theme-primary-color;
+
+            }
+        }
+
+        .nav-tabs {
+            .nav-item {
+                .nav-link {
+                    color: $theme-color-white;
+                }
+            }
+        }
+
+    }
+
+
+
+}
+
+// filter section css
+.filter-sec {
+    background-color: $theme-accent-three;
+
+    .flt-btn {
+        position: relative;
+        padding: 0 2rem 0 0;
+
+        &::before {
+            content: '\f282';
+            font-family: bootstrap-icons !important;
+            display: inline-block;
+            background-color: transparent;
+            width: 20px;
+            height: 20px;
+            z-index: 1;
+            position: absolute;
+            right: 0;
+            transform: rotate(180deg);
+        }
+    }
+
+    .collapsed {
+        &::before {
+            transform: rotate(0deg);
+        }
+    }
+}
+
+// checkbox css
+.check-wrap {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: $theme-accent-one;
+    font-size: $font-small;
+
+    &:hover input~.checkmark {
+        background-color: $theme-primary-color;
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    input:checked~.checkmark {
+        background-color: $theme-primary-color;
+        border: 0px solid $theme-primary-color;
+
+        &:after {
+            display: block;
+        }
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        border-radius: 4px;
+        border: 1px solid $theme-accent-two;
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 6px;
+            top: 2px;
+            width: 6px;
+            height: 12px;
+            border: solid $theme-secondary-color;
+            border-width: 0 3px 3px 0;
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+}
+
+// input range css
+.price-range-slider {
+    width: 100%;
+    float: left;
+    padding: 10px 20px;
+
+    .range-value {
+        margin: 0;
+
+        input {
+            width: 100%;
+            background: none;
+            color: $theme-accent-one;
+            font-size: 16px;
+            font-weight: initial;
+            box-shadow: none;
+            border: none;
+            margin: 20px 0 20px 0;
+        }
+    }
+
+    .range-bar {
+        border: none;
+        background: $theme-accent-one;
+        height: 3px;
+        width: 96%;
+        margin-left: 8px;
+        padding: 0 !important;
+        border: 0 !important;
+
+        .ui-slider-range {
+            background: $theme-primary-color;
+        }
+
+        .ui-slider-handle {
+            border: none;
+            border-radius: 25px;
+            background: $theme-color-white;
+            border: 2px solid $theme-secondary-color;
+            height: 17px;
+            width: 17px;
+            top: -0.52em;
+            cursor: pointer;
+        }
+
+        .ui-slider-handle+span {
+            background: $theme-secondary-color;
+        }
+    }
+}
+
+// srp round trip css
+.srp {
+    .stops {
+        display: block;
+        width: 60px;
+        height: 2px;
+        background-color: $theme-accent-two;
+        position: relative;
+
+        .one {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            display: flex;
+            background: $theme-secondary-color;
+            position: absolute;
+            top: -3px;
+            left: 40%;
+        }
+
+    }
+
+}
+
+// srp selected flight css
+.selected-strip {
+    box-shadow: 0px 0 20px rgba($theme-secondary-color, 0.5);
+}
+
+// review steps css
+.reviewStatus {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2px;
+    background: $theme-color-white;
+    border-radius: 8px;
+    position: relative;
+    color: $theme-color-white;
+    font-size: $font-small;
+}
+
+.reviewStatus li {
+    -ms-flex: 1;
+    flex: 1 1;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.reviewStatus:before {
+    height: 2px;
+    background: $theme-primary-color;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+}
+
+.reviewStatus.step1:before {
+    width: 0%;
+}
+
+.reviewStatus.step2:before {
+    width: 25%;
+    animation-name: step2;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 500ms;
+}
+
+.reviewStatus.step3:before {
+    width: 50%;
+    animation-name: step3;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 500ms;
+}
+
+.reviewStatus.step4:before {
+    width: 75%;
+    animation-name: step4;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 500ms;
+}
+
+// animation
+@-webkit-keyframes step2 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 25%
+    }
+}
+
+@keyframes step2 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 25%
+    }
+}
+
+@-webkit-keyframes step3 {
+    from {
+        width: 25%
+    }
+
+    to {
+        width: 50%
+    }
+}
+
+@keyframes step3 {
+    from {
+        width: 25%
+    }
+
+    to {
+        width: 50%
+    }
+}
+
+@-webkit-keyframes step4 {
+    from {
+        width: 50%
+    }
+
+    to {
+        width: 75%
+    }
+}
+
+@keyframes step4 {
+    from {
+        width: 50%
+    }
+
+    to {
+        width: 75%
+    }
+}
+
+
+
+
+.reviewStatus .numbering {
+    width: 13px;
+    min-height: 13px;
+    font-size: 10px;
+    background: $theme-color-white;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    top: -5px;
+    color: $theme-accent-one;
+}
+
+.reviewStatus .numbering.completed {
+    background: $theme-primary-color;
+    text-indent: -999999px;
+    position: relative;
+}
+
+.reviewStatus .numbering.completed:before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 7px;
+    border: solid $theme-color-white;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    left: 4px;
+    top: 2.5px;
+}
+
+.reviewStatus .numbering.onpage {
+    background: $theme-primary-color;
+    color: $theme-color-white;
+}
+
+.reviewStatus .reviewText.active {
+    font-weight: 700;
+    color: $theme-color-white;
+}
+
+.reviewStatus .numbering.completed:before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 7px;
+    border: solid $theme-color-white;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    left: 5px;
+    top: 2px;
+}
+
+// payment page tab css
+.custom-tab {
+    .nav-link {
+        text-align: left;
+        background: $theme-accent-three;
+        color: $theme-accent-one  !important;
+        font-size: $font-medium;
+        border-radius: 0;
+        border-bottom: 1px solid $body-color;
+        padding: 1.02rem 1rem;
+
+        &:last-child {
+            border-bottom: 0px solid transparent;
+        }
+    }
+
+    .first-tab {
+        border-top-left-radius: $theme-border-radius  !important;
+    }
+
+    .last-tab {
+        border-bottom-left-radius: $theme-border-radius  !important;
+    }
+
+
+    .nav-link.active,
+    .show>.nav-link {
+        text-align: left;
+        background: $theme-color-white;
+        color: $theme-accent-one;
+        font-size: $font-medium;
+        border-radius: 0;
+    }
+
+    // payment icon css
+    .payment-icon {
+        width: 24px;
+        height: 16px;
+        display: inline-block;
+        background: url(../images/icons/icons-sprite-payment.png) no-repeat;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+    .credit {
+        background-position: 0 0;
+    }
+
+    .debit {
+        background-position: -25px 0;
+    }
+
+    .net {
+        background-position: -50px 0;
+    }
+
+    .upi {
+        background-position: -75px 0;
+    }
+
+    .phone {
+        background-position: -100px 0;
+    }
+
+    .wallet {
+        background-position: -125px 0;
+    }
+
+    .paypal {
+        background-position: -150px 0;
+    }
+
+    .emi {
+        background-position: -175px 0;
+    }
+
+}
+
+.form-label {
+    font-size: $font-medium;
+}
+
+// inner page banner css
+.inner-banner {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 430px;
+}
+
+// privacy page banner image 
+.privacy-page-bg {
+    background-image: url(../images/privacy-page-bg.jpg);
+}
+
+// deals and offers banner image 
+.deals-page-bg {
+    background-image: url(../images/deals-offer-banner.jpg);
+}
+
+// privacy page css
+.privacy-list {
+
+    li {
+        font-size: $font-medium;
+        color: $theme-accent-two;
+        line-height: 2;
+        list-style: disc;
+        margin-left: 1.125rem;
+    }
+}
+
+// about us css
+.company-qotes {
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color: $theme-accent-two;
+    font-weight: 300;
+    position: relative;
+    padding: 0 0 0 3rem;
+    margin-bottom: 2rem;
+
+    &::after,
+    &:before {
+        content: '';
+        background: url(../images/qotes-icon.png) no-repeat;
+        width: 36px;
+        height: 30px;
+        display: block;
+    }
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &::before {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: rotate(180deg);
+    }
+}
+
+.about-pic {
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: $theme-box-shadow;
+    border: 5px solid $theme-color-white;
+}
+
+// contact us css
+.text-color {
+    color: rgba($theme-secondary-color, 0.2);
+}
+
+iframe {
+    width: 100%;
+}
+
+// deals & offers css
+.deals-tab {
+    box-shadow: $theme-box-shadow;
+    border-radius: $theme-border-radius;
+    flex-wrap: nowrap;
+
+    li {
+        .nav-link {
+            color: $theme-accent-one;
+            padding: 1rem;
+        }
+
+        .nav-link.active {
+            background-color: transparent;
+            border-bottom: 2px solid $theme-secondary-color;
+            border-radius: 0;
+            color: $theme-secondary-color;
+        }
+    }
+}
+
+.offers-content {
+    .wrap-img {
+        position: relative;
+        min-height: 150px;
+        height: auto;
+        max-height: 200px;
+        overflow: hidden;
+    }
+
+    .wrap-content {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+// addon section css
+.addons-tab {
+    li.nav-item {
+        background-color: $theme-color-white;
+
+        div {
+            cursor: pointer;
+        }
+
+        div {
+            &:hover {
+                background-color: $theme-accent-three;
+            }
+        }
+
+
+
+        .active {
+            background-color: $theme-accent-three;
+        }
+    }
+
+}
+
+.add-btn-wrap {
+    box-shadow: $theme-box-shadow;
+    border-radius: $theme-border-radius;
+    width: 50%;
+}
+
+.active-addon {
+    border-bottom: 2px solid $theme-secondary-color;
+    background-color: $theme-accent-three;
+}
+
+// my account profile css
+.profile-pic {
+    background-color: $body-color;
+    width: 100%;
+    height: 100%;
+    min-height: 130px;
+    border-radius: $theme-border-radius;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.edit-btn {
+    position: absolute;
+    bottom: -5px;
+    border: 2px solid $theme-color-white;
+    background-color: $theme-secondary-color;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+        color: $theme-color-white;
+        font-size: $font-small;
+    }
+
+    &:hover {
+        background-color: $theme-color-white;
+
+        i {
+            color: $theme-secondary-color;
+        }
+    }
+}
+
+.profile {
+    width: 100%;
+    height: 5px;
+    background-color: $theme-accent-two;
+}
+
+.complete-100 {
+    width: 100%;
+    background-color: green;
+}
+
+.traveller-pic {
+    background-color: $theme-accent-three;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    vertical-align: middle;
+    position: relative;
+}
+
+// my account booking css
+.img-icon {
+    width: 25px;
+    height: 23px;
+    display: inline-block;
+    background: url(../images/icons/my-booking-sprite.svg) no-repeat;
+
+}
+
+.icon-upcoming {
+    background-size: 540%;
+    background-position: 0px 0px;
+}
+
+.icon-cancel {
+    background-size: 540%;
+    background-position: -85px 0px;
+}
+
+.icon-complete {
+    background-size: 540%;
+    background-position: -53px 0px;
+}
+
+.icon-fail {
+    background-size: 540%;
+    background-position: -27px 0px;
+}
+
+// my booking - refund steps
+.refund-step {
+    margin-top: 1rem;
+
+    li {
+        font-size: $font-small;
+        display: inline-flex;
+        flex-direction: column;
+        padding-right: 5rem;
+        position: relative;
+
+        &::after {
+            content: '';
+            background-color: $theme-primary-color;
+            width: 90%;
+            height: 4px;
+            display: block;
+            position: absolute;
+            top: 15px;
+            left: 24px;
+            z-index: 1;
+
+
+        }
+
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+// my wallet - css
+.wallet-head {
+    background-color: $theme-accent-three;
+    border-radius: $theme-border-radius $theme-border-radius 0 0;
+}
+
+.cash-point {
+    width: 2rem;
+    height: 2rem;
+    background-color: $theme-primary-color;
+    border: 2px solid $theme-secondary-color;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    line-height: 2rem;
+    font-size: $font-small;
+    margin-right: 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.cash-info {
+    background-color: rgba($theme-primary-color, 0.2);
+    border-radius: $theme-border-radius;
+}
+
+// rewards icon css
+.hex {
+    width: 30px;
+    height: 18px;
+    background-color: $theme-secondary-color;
+    border-color: $theme-secondary-color;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    line-height: 0;
+
+    i {
+        color: $theme-color-white;
+    }
+
+    &:before {
+        content: " ";
+        width: 0;
+        height: 0;
+        border-bottom: 8px solid;
+        border-color: inherit;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        position: absolute;
+        top: -8px;
+        left: 0;
+    }
+
+    &:after {
+        content: "";
+        width: 0;
+        position: absolute;
+        bottom: -8px;
+        border-top: 8px solid;
+        border-color: inherit;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        left: 0;
+    }
+}
+
+// blog page css
+.pagination {
+    & li {
+        & a.page-link {
+            border: 2px solid $theme-accent-two;
+            border-radius: $theme-border-radius;
+            color: $theme-primary-color;
+            font-size: 20px;
+            line-height: 35px;
+            text-align: center;
+            width: 3rem;
+            height: 3rem;
+            display: inline-block;
+            margin-right: 10px;
+
+            &:hover {
+                color: $theme-color-white;
+                background: $theme-primary-color;
+                border-color: $theme-accent-two;
+            }
+
+            &:first-child {
+                border-radius: 0;
+                border-radius: $theme-border-radius;
+            }
+
+            &:last-child {
+                border-radius: 0;
+                border-radius: $theme-border-radius;
+            }
+        }
+    }
+}
+
+// post details css
+.post-wrap {
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+
+    p {
+        i {
+            line-height: 2rem;
+            font-size: $font-medium;
+            border-left: 2px solid $theme-primary-color;
+            height: 100%;
+            display: block;
+            padding: 1rem;
+            background: rgba($theme-primary-color, 0.04);
+            text-align: justify;
+        }
+    }
+
+    .post-head {
+        font-size: 1.5rem;
+        margin: 2rem 0;
+        font-weight: bold;
+    }
+
+    .post-desc {
+        font-size: $font-medium;
+        line-height: 2rem;
+        text-align: justify;
+    }
+}
+
+// blog social css
+.blog-post-social {
+    border-top: 2px solid $body-color;
+    border-bottom: 2px solid $body-color;
+    padding: 25px 0px;
+    margin-bottom: 55px
+}
+
+.post-tag-list {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    li {
+        font-weight: bold;
+        color: $theme-secondary-color;
+        margin-right: 8px;
+
+        &:first-child {
+            margin-right: 15px
+        }
+
+        a {
+            font-size: $font-medium;
+            color: $theme-accent-two;
+            font-weight: normal;
+
+            &:hover {
+                color: $theme-secondary-color;
+            }
+        }
+    }
+}
+
+.blog-icon-list {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    li {
+        margin-left: 1rem;
+
+        &:first-child {
+            font-weight: bold;
+            color: $theme-secondary-color;
+        }
+
+        a {
+            display: block;
+            transition: .4s ease;
+
+            i {
+                color: $theme-secondary-color;
+            }
+
+            &:hover {
+                transform: scale(1.2);
+
+            }
+        }
+    }
+}
+
+// comment section css
+
+.comment-box {
+    border-radius: $theme-border-radius;
+    box-shadow: $theme-box-shadow;
+
+    .comment-head {
+        padding: 2rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .user-comment-card {
+        margin-top: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+
+        li {
+            position: inherit;
+        }
+
+        .userPic {
+            position: relative;
+        }
+
+        .userName {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 1rem;
+            font-size: $font-medium;
+        }
+    }
+
+    .comment-title {
+        display: flex;
+        margin-bottom: 1rem;
+        align-items: center;
+        justify-content: space-between;
+
+        .comment-meta {
+            span {
+                color: $theme-accent-one;
+                font-size: $font-medium;
+            }
+        }
+    }
+
+    .comment-body {
+        p {
+            font-size: $font-medium;
+            line-height: 1.5;
+            color: $theme-accent-two;
+        }
+    }
+
+    h4 {
+        margin-bottom: 2rem;
+    }
+}
+
+// blog sidebar css
+
+.blog-list-head {
+    position: relative;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0 0 30px 0;
+    color: $theme-secondary-color;
+    font-weight: bold;
+
+    :after {
+        content: '';
+        width: 20px;
+        height: 4px;
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        background: $theme-primary-color;
+    }
+}
+
+
+// category css
+
+.widget-categories {
+    li {
+        :first-child {
+            margin-top: 0
+        }
+
+        a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $theme-primary-color ;
+            padding: 10px 15px;
+            padding-left: 15px;
+            position: relative;
+            transition: all .2s;
+
+            &:hover {
+                background: rgba($theme-primary-color, .04);
+                color: $theme-secondary-color;
+
+                &::before {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 3px;
+                height: 100%;
+                background: $theme-secondary-color;
+                border-radius: 2px 0px 0px 2px;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                transition: all .2s;
+                transform: translateX(-5px);
+            }
+        }
+    }
+}
+
+// tags css
+
+.tags {
+    list-style-type: none;
+    border-radius: $theme-border-radius;
+    box-shadow: $theme-box-shadow;
+    padding: 1rem;
+
+    li {
+        padding: 1.0rem 0.5rem;
+        margin: 0 0;
+        display: inline-block;
+
+        a {
+            color: $theme-secondary-color;
+            font-weight: 600;
+            border-radius: $theme-border-radius;
+            background: $theme-accent-three;
+            padding: 0.5rem;
+
+            &:hover {
+                background: $theme-secondary-color;
+                color: $theme-color-white;
+            }
+        }
+    }
+}

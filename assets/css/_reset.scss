@@ -1,0 +1,53 @@
+* {
+
+  outline: none;
+
+}
+
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: $theme-link-color;
+}
+
+a:hover,
+a:active,
+a:focus {
+  transition: all ease-in-out 0.3s;
+}
+
+// form-control focus
+.form-control:focus {
+  color: $theme-secondary-color;
+  background-color: $theme-color-white;
+  border-color: $theme-primary-color;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba($theme-primary-color, 0.5);
+}
+
+.btn-check:focus+.btn,
+.btn:focus {
+  box-shadow: 0 0 0 0 rgba($theme-primary-color, 0.5);
+}
+
+.btn:hover {
+  border-color: inherit;
+  overflow: hidden;
+}
+
+// date calender
+.ui-state-default {
+  text-align: center !important;
+}
+
+.ui-state-hover {
+  background-color: $theme-primary-color !important;
+  border: inherit !important;
+}

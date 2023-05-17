@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="ThemesLay">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!--title tag for page -->
+    <title>Flight World - Blog Details Page</title>
+</head>
+
+<body>
+    <!-- preloader area -->
+    <div class="preloader">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="load-spinner">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pagewrap modify-search">
+        <div class="head-wrapper">
+            <!-- page header section -->
+            <header class="header header-light">
+                <div class="container">
+                    <div class="sideMenu">
+                        <button type="button" class="btn rounded-0 btn-left toggle-slide-right"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop"
+                            aria-controls="offcanvasWithBackdrop">
+                            <i class="bi bi-text-center"></i>
+                        </button>
+                        <div class="offcanvas offcanvas-start theme-bg-secondary border-0" tabindex="-1"
+                            id="offcanvasWithBackdrop">
+                            <div class="p-0">
+                                <span class="p-0" id="offcanvasLabel"></span>
+                                <button type="button" class="btn-close custom-btn-close theme-text-white"
+                                    data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <i class="bi bi bi-x-lg"></i>
+                                </button>
+                            </div>
+                            <!-- left side menu section -->
+                            <div class="offcanvas-body p-0 mt-5">
+                                <ul class="menuList nav flex-column w-100">
+                                    <li class="nav-item"><a href="index.html" class="position-relative card-effect">
+                                            <div class="card-box"></div>
+                                            <i class="bi bi-house-fill ps-4 pe-2"></i>Home
+                                        </a>
+                                    </li>
+                                    <li class="nav-item"><a href="deals-offers.html"
+                                            class="position-relative card-effect">
+                                            <div class="card-box"></div>
+                                            <i class="bi bi-chat-square-heart-fill ps-4 pe-2"></i>Specials Deals
+                                        </a>
+                                    </li>
+                                    <li class="nav-item"><a href="#travelDeals" class="position-relative card-effect">
+                                            <div class="card-box"></div>
+                                            <i class="bi bi-bookmark-check-fill ps-4 pe-2"></i>Travel Deals
+                                        </a>
+                                    </li>
+                                    <li class="nav-item"><a href="#featuredFlights"
+                                            class="position-relative card-effect">
+                                            <div class="card-box"></div>
+                                            <i class="bi bi-bell-fill ps-4 pe-2"></i>Featured Flights
+                                        </a>
+                                    </li>
+                                    <li class="nav-item"><a href="#howWork" class="position-relative card-effect">
+                                            <div class="card-box"></div>
+                                            <i class="bi bi-shield-fill-exclamation ps-4 pe-2"></i>How it Work
+                                        </a>
+                                    </li>
+                                    <li class="nav-item"><a href="about.html" class="position-relative card-effect">
+                                            <div class="card-box"></div>
+                                            <i class="bi bi-balloon-fill ps-4 pe-2"></i>About Us
+                                        </a>
+                                    </li>
+                                    <li class="nav-item"><a href="contact.html" class="position-relative card-effect">
+                                            <div class="card-box"></div>
+                                            <i class="bi bi-arrows-move ps-4 pe-2"></i>Contact Us
+                                        </a>
+                                    </li>
+                                    <li class="nav-item"><a href="blog.html" class="position-relative card-effect">
+                                            <div class="card-box"></div>
+                                            <i class="bi bi-arrow-right-circle-fill ps-4 pe-2"></i>Blogs
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="mt-5">
+                                    <p class="d-inline-flex theme-text-white">
+                                        <i class="bi bi-telephone-fill h4 theme-text-white ps-4 pe-2"></i>
+                                        24×7 Customer Support <br> 1800-313-5699
+                                    </p>
+                                </div>
+                                <div class="mt-3">
+                                    <p class="d-inline-flex theme-text-white">
+                                        <i class="bi bi-envelope-fill h4 theme-text-white ps-4 pe-2"></i>
+                                        Email us <br> support@example.com
+                                    </p>
+                                </div>
+                                <p class="ps-4 mb-0 mt-5 theme-text-white">Social Network</p>
+                                <div class="d-flex social mt-3 ps-4">
+                                    <a href="#" class="h4 pe-3"><i class="bi bi-facebook"></i></a>
+                                    <a href="#" class="h4 px-3"><i class="bi bi-twitter"></i></a>
+                                    <a href="#" class="h4 px-3"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="h4 px-3"><i class="bi bi-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-expand-md navbar-light py-0 px-0">
+                        <a class="navbar-brand ms-5" href="index.html"><img src="assets/images/logo.png"
+                                alt="Brand Logo" title="Brand Logo" class="img-fluid"></a>
+                        <button class="navbar-toggler px-1 btn rounded-0" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                    <div class="dropdown-container pe-md-4">
+                                        <div class="dropdown-toggle click-dropdown">
+                                            <i class="bi bi-currency-exchange"></i> Currency
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="nav-item"><a class="dropdown-item" href="#">INR</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="#">USD</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="#">EUR</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="dropdown-container pe-md-4">
+                                        <div class="dropdown-toggle click-dropdown">
+                                            <i class="bi bi-translate"></i> Language
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="nav-item"><a class="dropdown-item" href="#">English</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="#">Rusian</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="#">French</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="dropdown-container">
+                                        <div class="dropdown-toggle click-dropdown">
+                                            <i class="bi bi-person-circle"></i> Account
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                <li class="nav-item"><a class="dropdown-item"
+                                                        href="signin.html">Login</a></li>
+                                                <li class="nav-item"><a class="dropdown-item"
+                                                        href="signup.html">Register</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <!-- review booking flight-->
+            <div class="flight-search">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-12">
+                            <span class="fw-bold theme-text-white"><a href="blog.html"
+                                    class="theme-text-primary">Blog</a> <i class="bi bi-arrow-right"></i> Details</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- body section -->
+        <div class="content-section">
+            <!-- blog page section -->
+            <section class="recom-sec theme-bg-white py-5">
+                <div class="container">
+                    <div class="row">
+                        <!-- left side blog post -->
+                        <div class="col-md-8 col-sm-12 col-xs-12">
+                            <div class="row">
+                                <!-- blog post details -->
+                                <div class="col-12">
+                                    <div class="post-wrap">
+                                        <div class="overflow-hidden hoverShine theme-border-radius">
+                                            <figure class="mb-0 img-effect">
+                                                <img src="assets/images/unique-ex/articles-post-big.png"
+                                                    class="img-fluid" alt="flight-destination"
+                                                    title="flight-destination">
+                                            </figure>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between my-3">
+                                            <div class="">
+                                                <span
+                                                    class="d-inline-flex p-3 rounded-circle theme-bg-accent-three theme-box-shadow">
+                                                    <i class="bi bi-pencil"></i>
+                                                </span>
+                                                <span class="author-info">Joe Wilson, <span
+                                                        class="font-small">admin</span></span>
+                                            </div>
+                                            <span class="font-medium">
+                                                <i class="bi bi-calendar-week me-2"></i>
+                                                <span class=" theme-text-accent-two">17-Aug-2022</span>
+                                            </span>
+                                        </div>
+                                        <h2 class="post-head">A brand for a company is like reputation for a person you
+                                            earn</h2>
+                                        <p class="post-desc">Travel is now days very beautiful and pleasant, if the snow
+                                            was not so bad. We travelled from Moscow on time to our hotel at 10 am due
+                                            north of London's Gatwick Airport. The taxi driver asked us about it
+                                            beforehand because he didn't know that we'd be flying there after 7 pm (I
+                                            say later today as you read this). Our flight arrived in Paris just around
+                                            2pm yesterday evening with a few hours free left for breakfast then packed
+                                            up all by ourselves shortly before 9:30am - no hassle required! And here's
+                                            what everyone said when they saw me fly across Lake Geneva..... "Glad I came
+                                            along!" "My girlfriend & family</p>
+                                        <p class="fw-bold"><i>Travel is now days very beautiful and the views are
+                                                amazing. It has been nice to see all these visitors taking pictures of
+                                                us as they walked through or walking in front for me." He says he would
+                                                not be able back home without visiting his family: "I have no idea what
+                                                I am going again next week because my friends won't let him come here if
+                                                he's from there anymore. That will happen soon too!"</i></p>
+                                        <div class="row my-5">
+                                            <div class="col-lg-6 mb-3 mb-lg-0">
+                                                <img src="assets/images/unique-ex/articles-post-sub01.png"
+                                                    class="img-fluid" alt="post image">
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <img src="assets/images/unique-ex/articles-post-sub02.png"
+                                                    class="img-fluid" alt="post image">
+                                            </div>
+                                        </div>
+                                        <p class="post-desc">Travel is now days very beautiful and pleasant, if the snow
+                                            was not so bad. We travelled from Moscow on time to our hotel at 10 am due
+                                            north of London's Gatwick Airport. The taxi driver asked us about it
+                                            beforehand because he didn't know that we'd be flying there after 7 pm (I
+                                            say later today as you read this). Our flight arrived in Paris just around
+                                            2pm yesterday evening with a few hours free left for breakfast then packed
+                                            up all by ourselves shortly before 9:30am - no hassle required! And here's
+                                            what everyone said when they saw me fly across Lake Geneva..... "Glad I came
+                                            along!" "My girlfriend & family.</p>
+                                    </div>
+                                </div>
+                                <!-- blog post social -->
+                                <div class="col-12">
+                                    <div class="row g-0 row blog-post-social">
+                                        <div class="col-md-6 d-flex justify-content-md-start justify-content-center">
+                                            <ul class="post-tag-list">
+                                                <li>TAGS:</li>
+                                                <li><a href="#">Survey,</a></li>
+                                                <li><a href="#">Data,</a></li>
+                                                <li><a href="#">Center,</a></li>
+                                                <li><a href="#">VAS,</a></li>
+                                                <li><a href="#">Setup</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6 d-flex justify-content-md-end justify-content-center">
+                                            <ul class="blog-icon-list">
+                                                <li>Follow:</li>
+                                                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                                <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                                                <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                                                <li><a href="#"><i class="bi bi-pinterest"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Comment section -->
+                                <div class="col-12">
+                                    <div class="comment-box">
+                                        <h3 class="comment-head">03 Comments</h3>
+                                        <!-- Comment 1 -->
+                                        <ul class="user-comment-card">
+                                            <li>
+                                                <div class="comment-title">
+                                                    <div class="userPic">
+                                                        <img src="assets/images/userCommentPic.png" alt="User Pic"
+                                                            title="User Pic">
+                                                        <span class="userName">Fatima Taneja</span>
+                                                    </div>
+                                                    <div class="comment-meta">
+                                                        <span>18 Feb 2020 at</span>
+                                                        <span>2:30 pm</span>
+                                                    </div>
+                                                </div>
+                                                <div class="comment-content">
+                                                    <div class="comment-body">
+                                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate
+                                                            consequat,
+                                                            vel illumUt wisi enim ad minim veniam, quis nostrud
+                                                            exerci.Duis
+                                                            autem vel eum iriure dolor in hendrerit in vulputate
+                                                            consequat, vel
+                                                            illumUt wisi enim ad minim veniam, quis nostrud exerci.</p>
+                                                    </div>
+                                                    <div class="d-flex my-3">
+                                                        <a href="#" class="me-5 btn btn-ligh"><i
+                                                                class="bi bi-reply-fill pe-2"></i>Reply</a>
+                                                        <a href="#" class="me-5 btn btn-light"><i
+                                                                class="bi bi-hand-thumbs-up pe-2"></i>Like</a>
+                                                    </div>
+                                                </div>
+                                                <!-- Comment 1 reply -->
+                                                <ul class="user-comment-card">
+                                                    <li>
+                                                        <div class="comment-title">
+                                                            <div class="userPic">
+                                                                <img src="assets/images/user2CommentPic.png"
+                                                                    alt="User Pic" title="User Pic">
+                                                                <span class="userName">Fatima Taneja</span>
+                                                            </div>
+                                                            <div class="comment-meta">
+                                                                <span>18 Feb 2020 at</span>
+                                                                <span>2:30 pm</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="comment-content">
+                                                            <div class="comment-body">
+                                                                <p>Duis autem vel eum iriure dolor in hendrerit in
+                                                                    vulputate
+                                                                    consequat,
+                                                                    vel illumUt wisi enim ad minim veniam, quis nostrud
+                                                                    exerci.Duis
+                                                                    autem vel eum iriure dolor in hendrerit in vulputate
+                                                                    consequat, vel
+                                                                    illumUt wisi enim ad minim veniam, quis nostrud
+                                                                    exerci.</p>
+                                                            </div>
+                                                            <div class="d-flex my-3">
+                                                                <a href="#" class="me-5 btn btn-ligh"><i
+                                                                        class="bi bi-reply-fill pe-2"></i>Reply</a>
+                                                                <a href="#" class="me-5 btn btn-light"><i
+                                                                        class="bi bi-hand-thumbs-up pe-2"></i>Like</a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <!-- Comment 2 -->
+                                        <ul class="user-comment-card">
+                                            <li>
+                                                <div class="comment-title">
+                                                    <div class="userPic">
+                                                        <img src="assets/images/userCommentPic.png" alt="User Pic"
+                                                            title="User Pic">
+                                                        <span class="userName">Fatima Taneja</span>
+                                                    </div>
+                                                    <div class="comment-meta">
+                                                        <span>18 Feb 2020 at</span>
+                                                        <span>2:30 pm</span>
+                                                    </div>
+                                                </div>
+                                                <div class="comment-content">
+                                                    <div class="comment-body">
+                                                        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate
+                                                            consequat,
+                                                            vel illumUt wisi enim ad minim veniam, quis nostrud
+                                                            exerci.Duis
+                                                            autem vel eum iriure dolor in hendrerit in vulputate
+                                                            consequat, vel
+                                                            illumUt wisi enim ad minim veniam, quis nostrud exerci.</p>
+                                                    </div>
+                                                    <div class="d-flex my-3">
+                                                        <a href="#" class="me-5 btn btn-ligh"><i
+                                                                class="bi bi-reply-fill pe-2"></i>Reply</a>
+                                                        <a href="#" class="me-5 btn btn-light"><i
+                                                                class="bi bi-hand-thumbs-up pe-2"></i>Like</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- Reply comment form -->
+                                        <div class="row p-4 my-5">
+                                            <h4>Leave A Comment</h4>
+                                            <form class="col-12 comment-form">
+                                                <div class="row">
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-floating mb-3">
+                                                            <input type="email" class="form-control" id="floatingInput1"
+                                                                placeholder="Your Name">
+                                                            <label for="floatingInput1">Your
+                                                                Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-6">
+                                                        <div class="form-floating mb-3">
+                                                            <input type="email" class="form-control" id="floatingInput2"
+                                                                placeholder="Enter Yourn Email">
+                                                            <label for="floatingInput2">Your
+                                                                Email</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <textarea class="form-control" id="Textarea1" rows="3"
+                                                        placeholder="Your Message"></textarea>
+                                                </div>
+                                                <button type="submit" class="btn btn-effect btn-book px-5 mt-3">Post
+                                                    Comment</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- blog sidebar -->
+                        <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="row">
+                                <!-- blog search -->
+                                <div class="col-12">
+                                    <div class="input-group input-group-lg mb-5">
+                                        <span class="input-group-text bg-transparent" id="basic-addon1"><i
+                                                class="bi bi-search"></i></span>
+                                        <input type="text" class="form-control border-start-0"
+                                            placeholder="Search a Topic" aria-label="Username"
+                                            aria-describedby="basic-addon1">
+                                    </div>
+                                </div>
+                                <!-- Trending post Tags  -->
+                                <div class="col-12">
+                                    <h6 class="blog-list-head">Trending post</h6>
+                                    <!-- trending post 01 -->
+                                    <div class="theme-box-shadow theme-border-radius px-4 py-4 theme-bg-white mb-4">
+                                        <div class="row g-0">
+                                            <div class="col-12 col-xxl-6 overflow-hidden theme-border-radius">
+                                                <div class="overflow-hidden hoverShine">
+                                                    <figure class="mb-0 img-effect">
+                                                        <img src="assets/images/destination/destination01.png"
+                                                            class="img-fluid" alt="flight-destination-one"
+                                                            title="flight-destination-one">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-xxl-6 align-self-center">
+                                                <div class="mt-2 mt-xxl-0 ps-md-0 ps-xxl-3">
+                                                    <span class="d-flex fw-bold">Emirrates Flights to Mumbai</span>
+                                                    <span class="d-flex font-small fw-normal theme-text-accent-two">Book
+                                                        your
+                                                        faviort itiniary in best price</span>
+                                                    <a href="#"
+                                                        class="d-inline-flex mt-2 text-link text-link-effect"><span>Read
+                                                            Now</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- trending post 02 -->
+                                    <div class="theme-box-shadow theme-border-radius px-4 py-4 theme-bg-white mb-4">
+                                        <div class="row g-0">
+                                            <div class="col-12 col-xxl-6 overflow-hidden theme-border-radius">
+                                                <div class="overflow-hidden hoverShine">
+                                                    <figure class="mb-0 img-effect">
+                                                        <img src="assets/images/destination/destination04.png"
+                                                            class="img-fluid" alt="flight-destination-four"
+                                                            title="flight-destination-four">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-xxl-6">
+                                                <div class="mt-2 mt-xxl-0 ps-md-0 ps-xxl-3">
+                                                    <span class="d-flex fw-bold">Cathay Pacific Airways to Tokiyo</span>
+                                                    <span class="d-flex font-small fw-normal theme-text-accent-two">Book
+                                                        your
+                                                        faviort itiniary in best price</span>
+                                                    <a href="#"
+                                                        class="d-inline-flex mt-2 text-link text-link-effect"><span>Book
+                                                            Now</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- trending post 03 -->
+                                    <div class="theme-box-shadow theme-border-radius px-4 py-4 theme-bg-white mb-3">
+                                        <div class="row g-0">
+                                            <div class="col-12 col-xxl-6 overflow-hidden theme-border-radius">
+                                                <div class="overflow-hidden hoverShine">
+                                                    <figure class="mb-0 img-effect">
+                                                        <img src="assets/images/destination/destination02.png"
+                                                            class="img-fluid" alt="flight-destination-two"
+                                                            title="flight-destination-two">
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-xxl-6">
+                                                <div class="mt-2 mt-xxl-0 ps-md-0 ps-xxl-3">
+                                                    <span class="d-flex fw-bold">Qatar Airways Flights to Dubai</span>
+                                                    <span class="d-flex font-small fw-normal theme-text-accent-two">Book
+                                                        your
+                                                        faviort itiniary in best price</span>
+                                                    <a href="#"
+                                                        class="d-inline-flex mt-2 text-link text-link-effect"><span>Read
+                                                            Now</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Categories Tags  -->
+                                <div class="col-12 mt-5">
+                                    <h6 class="blog-list-head">Travel Categories</h6>
+                                    <ul class="widget-categories">
+                                        <li><a href="#">
+                                                <span>All Travel</span>
+                                                <i class="bi bi-arrow-right"></i></a>
+                                        </li>
+                                        <li><a href="#"><span>Flight</span>
+                                                <i class="bi bi-arrow-right"></i></a></li>
+                                        <li><a href="#"><span>Hotels</span>
+                                                <i class="bi bi-arrow-right"></i></a></li>
+                                        <li><a href="#"><span>Car Rental</span>
+                                                <i class="bi bi-arrow-right"></i></a></li>
+                                        <li><a href="#"><span>Holidays</span>
+                                                <i class="bi bi-arrow-right"></i></a></li>
+                                    </ul>
+                                </div>
+                                <!-- Blog Tags  -->
+                                <div class="col-12 mt-5">
+                                    <h6 class="blog-list-head">Travel Tags</h6>
+                                    <ul class="tags">
+                                        <li><a href="#">Data</a></li>
+                                        <li><a href="#">Tickets</a></li>
+                                        <li><a href="#">Trip</a></li>
+                                        <li><a href="#">Planning </a></li>
+                                        <li><a href="#">Fly Way </a></li>
+                                        <li><a href="#">One Way</a></li>
+                                        <li><a href="#">Multicity</a></li>
+                                        <li><a href="#">Online</a></li>
+                                        <li><a href="#">Flights</a></li>
+                                        <li><a href="#">Cheap</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mt-5">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1"><i class="bi bi-arrow-left"></i></a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#"><i class="bi bi-arrow-right"></i></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+        <!-- page footer section -->
+        <footer class="footer" id="footerSec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 pt-5">
+                        <img src="assets/images/logoWhite.png" class="img-fluid" alt="Brand color white"
+                            title="Brand color white">
+                        <p class="text-justify pt-5">Flight World Travel Agent dashboard is a specialized travel service
+                            for organizations from flightworld.com</p>
+                        <p class="pt-lg-5">Get Latest Deals, Upcoming Flight Offers and Cheap Fare</p>
+                        <form class="form">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control py-3 rounded-0" id="inputPassword2"
+                                            placeholder="Enter your email address">
+                                        <button type="button"
+                                            class="btn btn-outline-light rounded-0 custom-btn-subscribe btn-effect">Subscribe</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="col-12 mt-5">
+                            <img src="assets/images/tafi.svg" class="img-fluid me-4" alt="tafi" title="tafi">
+                            <img src="assets/images/taai.svg" class="img-fluid" alt="taai" title="taai">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 pt-5">
+                        <img src="assets/images/iata.svg" class="img-fluid d-inline-flex" alt="IATA" title="IATA">
+                        <p class="fw-bold text-uppercase mb-0 ms-2 d-inline-flex">We are an IATA Certified travel agency
+                        </p>
+                        <div class="row">
+                            <div class="col-md-4 mt-5">
+                                <p class="text-uppercase fw-bold mb-4">About Us</p>
+                                <ul class="fl-menu">
+                                    <li class="nav-item"><a href="about.html">About</a></li>
+                                    <li class="nav-item"><a href="contact.html">Contact us</a></li>
+                                    <li class="nav-item"><a href="#">Bank Details</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 mt-5">
+                                <p class="text-uppercase fw-bold">Legal</p>
+                                <ul class="fl-menu">
+                                    <li class="nav-item"><a href="privacy.html">Privacy</a></li>
+                                    <li class="nav-item"><a href="#">T&C</a></li>
+                                    <li class="nav-item"><a href="#">Disclaimer</a></li>
+                                    <li class="nav-item"><a href="#">Privacy and Cookies</a></li>
+                                    <li class="nav-item"><a href="#">Legal</a></li>
+                                    <li class="nav-item"><a href="#">Help</a></li>
+                                    <li class="nav-item"><a href="#">Feedback</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 mt-5">
+                                <p class="text-uppercase fw-bold">Company</p>
+                                <ul class="fl-menu">
+                                    <li class="nav-item"><a href="#">Partner With Us</a></li>
+                                    <li class="nav-item"><a href="#">Services</a></li>
+                                    <li class="nav-item"><a href="#">Careers</a></li>
+                                    <li class="nav-item"><a href="#">Products</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-0 pt-5">
+                    <div class="col-12 border-top border-bottom">
+                        <div class="row">
+                            <div class="col-12 col-lg-4 text-start py-3">
+                                <p class="d-inline-flex text-uppercase mb-0">Follow Us</p>
+                                <div class="d-inline-flex social">
+                                    <a href="#" class="ps-3"><i class="bi bi-facebook"></i></a>
+                                    <a href="#" class="ps-3"><i class="bi bi-twitter"></i></a>
+                                    <a href="#" class="ps-3"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="ps-3"><i class="bi bi-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 text-lg-center social py-3">
+                                <p class="d-inline-flex text-uppercase mb-0">Support Center:</p>
+                                <a href="#" class="botom-link">(769) 25698745</a>
+                            </div>
+                            <div class="col-12 col-lg-4 text-lg-end social py-3">
+                                <a href="mailto:support@example.com" class="botom-link">support@example.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <p class="text-center py-5 mb-0 font-small">©2022 Flight World Pwt Lcd. All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <p id="back-top" class="back-to-top bg-dark" style="display: block;">
+                <a href="#top"><i class="bi bi-chevron-up"></i></a>
+            </p>
+        </footer>
+
+    </div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--This page JavaScript -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--Data Calendar js -->
+    <script src="assets/js/jquery-ui.js"></script>
+    <!--Traveler counter js -->
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- animation aos library -->
+    <script src="assets/js/aos.js"></script>
+</body>
+
+</html>
