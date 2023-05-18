@@ -1350,6 +1350,8 @@ iframe {
 
 #default-page .head-wrapper {
   min-height: 100vh;
+  background: #002d5b;
+
 }
 
 .promo-ban .container-fluid .owl-carousel .owl-nav button.owl-prev {

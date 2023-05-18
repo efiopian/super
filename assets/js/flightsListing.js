@@ -22,28 +22,36 @@ localStorage.setItem("onewayDestinationCity", onewayDestination.split(' ').shift
 let formattedDate = date.split("/");
 formattedDate = `${formattedDate[2]}-${formattedDate[0]}-${formattedDate[1]}`;
 const url = `${FLIGHTS_API_URL}/${onewayOriginIata}/${onewayDestinationIata}/${formattedDate}/${adults || 1}/${children || 0}/${infants || 0}/${travelClass || "Economy"}/USD`;
-let flydata;
 fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    console.log("data", data);
-    flydata = data;
-    // Get the DOM element where the card will be inserted
-    const container = document.getElementById('flightsList');
+    .then(response => response.json())
+    .then(data => {
+        console.log("data", data);
+        // Get the DOM element where the card will be inserted
+        const container = document.getElementById('flightsList');
 
-    // // Create a new card element
-    data.legs.forEach((leg, i) => {
-        const element = document.createElement('div');
-        element.classList.add('col-12', 'mb-3', 'aos-init', 'aos-animate');
-        element.dataset.aos = "fade-up";
-        const tripId = data.trips.filter(trip => trip.legIds[0] === leg.id)[0].id;
-        const flightFare = data.fares.filter(fare => fare.tripId === tripId)[0];
-        const airline = data.airlines.filter(al => al.code === leg.airlineCodes[0])[0].name;
-        const bort = leg.id.split(':')[1];
-        element.innerHTML = `
+        // // Create a new card element
+        data.legs.forEach((leg, i) => {
+            const element = document.createElement('div');
+            element.classList.add('col-12', 'mb-3');
+            element.dataset.aos = "fade-up";
+            
+            if (i > 0){
+                element.dataset.aos.delay="300"
+            }
+  
+            const tripId = data.trips.filter(trip => trip.legIds[0] === leg.id)[0].id;
+            const flightFare = data.fares.filter(fare => fare.tripId === tripId)[0];
+            const airline = data.airlines.filter(al => al.code === leg.airlineCodes[0])[0].name;
+            const bort = leg.id.split(':')[1];
+            element.innerHTML = `
         <div class="row g-0 border theme-border-radius theme-box-shadow p-2 align-items-center theme-bg-white">
         <div class="col-12 col-md-3">
             <div class="d-flex">
+            <div>
+            <img src="assets/images/icons/flight-booking-icon.png"
+                class="img-fluid theme-border-radius" alt="airline"
+                title="airline icon">
+            </div>
                 <div class="d-flex flex-column ms-2">
                     <span class="font-small d-inline-flex mb-0 align-middle">${airline}
                     </span>
@@ -52,8 +60,8 @@ fetch(url)
             </div>
         </div>
         <div class="col-4 col-md-2">
-            <div class="fw-bold">${ leg.departureTime }</div>
-            <div class="font-small">${ leg.departureAirportCode }</div>
+            <div class="fw-bold">${leg.departureTime}</div>
+            <div class="font-small">${leg.departureAirportCode}</div>
         </div>
         <div class="col-4 col-md-2">
             <div class="font-small">${leg.duration}</div>
@@ -74,9 +82,9 @@ fetch(url)
 </div>
         `
             // Add the card to the container
-    container.appendChild(element);
+            container.appendChild(element);
+        })
     })
-  })
-  .catch(error => {
-    console.error(error);
-  });
+    .catch(error => {
+        console.error(error);
+    });
