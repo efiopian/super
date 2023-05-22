@@ -110,3 +110,24 @@ function travellersHandlerRound(op) {
     const infoString = `${Number(adults) + Number(children) + Number(infants) + num} Traveller(s), ${travelClass ? travelClass : "Economy"}`
     travellersInfo.textContent = infoString;
 }
+
+let elementAdded = false;
+
+function temporarilyUnavailable() {
+    if (!elementAdded) {
+        const parent = document.querySelector("#noticeMessage");
+        const child = document.createElement("div");
+        child.classList.add("container");
+        child.innerHTML = `
+        <div class="row my-5">
+        <div class="col-12">
+            <p class="text-center theme-text-accent-one mb-0" style="color: white;">
+            We apologize for the inconvenience, but it seems that there is currently an issue with the functionality you are trying to use. Our team is aware of the problem and is working diligently to resolve it. We appreciate your patience and understanding. 
+            </p>
+        </div>
+        </div>
+    `
+    parent.appendChild(child);
+    elementAdded = true;
+    }   
+}
