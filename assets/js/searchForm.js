@@ -46,10 +46,21 @@ OWDestination.addEventListener('input', function () {
     autocompleteCityAirport(this);
 });
 
+const RoundOrigin = document.getElementById('returnOrigin');
+OWorigin.addEventListener('input', function () {
+    autocompleteCityAirport(this);
+});
+
+const RoundDestination = document.getElementById('returnDestination');
+OWDestination.addEventListener('input', function () {
+    autocompleteCityAirport(this);
+});
+
 function searchHandler() {
-    const onewayOrigin = document.getElementById('onewayOrigin');
-    const onewayDestination = document.getElementById('onewayDestination');
-    const date = document.getElementById("datepicker");
+    const onewayOrigin = document.getElementById('returnOrigin');
+    const onewayDestination = document.getElementById('returnDestination');
+    const date1 = document.getElementById("datepicker3");
+    const date2 = document.getElementById("datepicker4");
     const adults = document.querySelector('input[name="onewayAdult"]').value;
     const children = document.querySelector('input[name="onewayChild"]').value;
     const infants = document.querySelector('input[name="onewayInfant"]').value;
@@ -81,6 +92,20 @@ function travellersHandler(op) {
     travelClass = travelClass === null ? "Economy" : travelClass.value;
 
     const travellersInfo = document.querySelector("#travellersInfo");
+    const num = op === "plus" ? 1 : op === "minus" ? -1 : 0;
+    const infoString = `${Number(adults) + Number(children) + Number(infants) + num} Traveller(s), ${travelClass ? travelClass : "Economy"}`
+    travellersInfo.textContent = infoString;
+}
+
+function travellersHandlerRound(op) {
+    const adults = document.querySelector('input[name="roundAdult"]').value;
+    const children = document.querySelector('input[name="roundChild"]').value;
+    const infants = document.querySelector('input[name="roundInfant"]').value;
+    let travelClass = document.querySelector('input[name="class"]:checked');
+
+    travelClass = travelClass === null ? "Economy" : travelClass.value;
+
+    const travellersInfo = document.querySelector("#travellersInfoRound");
     const num = op === "plus" ? 1 : op === "minus" ? -1 : 0;
     const infoString = `${Number(adults) + Number(children) + Number(infants) + num} Traveller(s), ${travelClass ? travelClass : "Economy"}`
     travellersInfo.textContent = infoString;

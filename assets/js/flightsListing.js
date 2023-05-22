@@ -1,7 +1,7 @@
 // Define the API endpoint URL
 
 const API_KEY = '6454fd47cf9a27e29dd12b36';
-const FLIGHTS_API_URL = `https://api.flightapi.io/onewaytrip/${API_KEY}`;
+const FLIGHTS_API_URL = `https://api.flightapi.io/roundtrip/${API_KEY}`;
 // Fetch data from the API
 
 const onewayOrigin = localStorage.getItem('onewayOrigin');
@@ -15,17 +15,27 @@ const travelClass = localStorage.getItem('travelClass');
 
 const onewayOriginIata = onewayOrigin.split(" ").reverse()[0];
 localStorage.setItem("onewayOriginIata", onewayOriginIata);
-localStorage.setItem("onewayOriginCity", onewayOrigin.split(' ').shift());
+let onewayOriginCity = onewayOrigin.split(' ').shift();
+localStorage.setItem("onewayOriginCity", onewayOriginCity);
+
 const onewayDestinationIata = onewayDestination.split(' ').reverse()[0];
 localStorage.setItem("onewayDestinationIata", onewayDestinationIata);
-localStorage.setItem("onewayDestinationCity", onewayDestination.split(' ').shift());
+let onewayDestinationCity = onewayDestination.split(' ').shift();
+localStorage.setItem("onewayDestinationCity", onewayDestinationCity);
+
+document.querySelector("#directionOW").innerHTML = `${onewayOriginCity} (${onewayOriginIata})<i class="bi bi-arrow-right mx-2"></i>${onewayDestinationCity} (${onewayDestinationIata})`
+document.querySelector("#flightDate").textContent = localStorage.getItem('date');
+
 let formattedDate = date.split("/");
 formattedDate = `${formattedDate[2]}-${formattedDate[0]}-${formattedDate[1]}`;
-const url = `${FLIGHTS_API_URL}/${onewayOriginIata}/${onewayDestinationIata}/${formattedDate}/${adults || 1}/${children || 0}/${infants || 0}/${travelClass || "Economy"}/USD`;
+
+const url = `${FLIGHTS_API_URL}/${onewayOriginIata}/${onewayDestinationIata}/${formattedDate}/2023-07-01/${adults || 1}/${children || 0}/${infants || 0}/${travelClass || "Economy"}/USD`;
+
 fetch(url)
     .then(response => response.json())
     .then(data => {
         console.log("data", data);
+        localStorage.setItem("flightData", data);
         // Get the DOM element where the card will be inserted
         const container = document.getElementById('flightsList');
 
@@ -42,6 +52,8 @@ fetch(url)
             const tripId = data.trips.filter(trip => trip.legIds[0] === leg.id)[0].id;
             const flightFare = data.fares.filter(fare => fare.tripId === tripId)[0];
             const airline = data.airlines.filter(al => al.code === leg.airlineCodes[0])[0].name;
+            element.dataset.ticketprice = flightFare.price.amount;
+            element.dataset.legid = leg.id;
             const bort = leg.id.split(':')[1];
             element.innerHTML = `
         <div class="row g-0 border theme-border-radius theme-box-shadow p-2 align-items-center theme-bg-white">

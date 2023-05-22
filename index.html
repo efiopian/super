@@ -91,8 +91,8 @@
                 <!-- search engine flight-->
                 <div class="flight-search" data-aos="fade-up">
                     <div class="container">
-                        <!-- Nav tabs -->
-                        <!-- <ul class="nav nav-tabs border-0" role="tablist">
+                        <!-- Nav tabs --> 
+                        <ul class="nav nav-tabs border-0" role="tablist">
                             <li class="nav-item">
                                 <button class="nav-link active" id="oneway-tab" data-bs-toggle="tab" data-bs-target="#oneway" type="button" role="tab" aria-controls="oneway" aria-selected="true">
                                     <span class="d-inline-block icon-20 rounded-circle bg-white align-middle me-2"></span>
@@ -106,7 +106,7 @@
                             
                                 </button>
                             </li>
-                        </ul> -->
+                        </ul>
                         <!-- Tab content -->
                         <div class="tab-content">
                             <!-- oneway search -->
@@ -257,139 +257,139 @@
                             </div>
                         </div>
                         <!-- Return search -->
-                        <div id="return " class="tab-pane fade ">
-                            <div class="row ">
-                                <div class="col-sm-12 col-md-12 ">
-                                    <div class="search-pan row mx-0 theme-border-radius ">
-                                        <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2 ">
-                                            <div class="form-group ">
-                                                <i class="bi bi-geo-alt-fill position-absolute h2 icon-pos "></i>
-                                                <input type="text " class="form-control ps-5 " id="returnOrigin "
-                                                    placeholder="Origin ">
-                                                <button class="pos-swap "><i
-                                                        class="bi bi-arrow-left-right pl-1 "></i></button>
+                        <div id="return" class="tab-pane fade">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12">
+                                    <div class="search-pan row mx-0 theme-border-radius">
+                                        <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                            <div class="form-group">
+                                                <i class="bi bi-geo-alt-fill position-absolute h2 icon-pos"></i>
+                                                <input type="text" class="form-control ps-5" id="returnOrigin"
+                                                    placeholder="Origin">
+                                                <button class="pos-swap"><i
+                                                        class="bi bi-arrow-left-right pl-1"></i></button>
                                             </div>
                                         </div>
-                                        <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2 ">
-                                            <div class="form-group ">
-                                                <i class="bi bi-geo-alt-fill position-absolute h2 icon-pos "></i>
-                                                <input type="text " class="form-control ps-5 " id="returnDestination "
-                                                    placeholder="Destination ">
+                                        <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                            <div class="form-group">
+                                                <i class="bi bi-geo-alt-fill position-absolute h2 icon-pos"></i>
+                                                <input type="text" class="form-control ps-5" id="returnDestination"
+                                                    placeholder="Destination">
                                             </div>
                                         </div>
-                                        <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2 ">
-                                            <div class="form-control form-group d-flex ">
-                                                <i class="bi bi-calendar3 position-absolute h2 icon-pos "></i>
-                                                <span class="dep-date-input ">
-                                                    <input type="text " class="cal-input " placeholder="Depart Date "
-                                                        id="datepicker1 ">
+                                        <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2">
+                                            <div class="form-control form-group d-flex">
+                                                <i class="bi bi-calendar3 position-absolute h2 icon-pos"></i>
+                                                <span class="dep-date-input">
+                                                    <input type="text" class="cal-input" placeholder="Depart Date"
+                                                        id="datepicker3">
                                                 </span>
-                                                <span class="arv-date-input ms-2 ">
-                                                    <input type="text " class="cal-input " placeholder="Return Date "
-                                                        id="datepickerNull ">
+                                                <span class="arv-date-input ms-2">
+                                                    <input type="text" class="cal-input" placeholder="Return Date"
+                                                        id="datepicker4">
                                                 </span>
                                             </div>
                                         </div>
-                                        <div class="col-12 col-lg-6 col-xl-3 ps-0 mb-2 mb-lg-0 mb-xl-0 pe-0 pe-lg-2 ">
-                                            <div class="dropdown " id="myDDReturn ">
-                                                <button class="dropdown-toggle form-control " type="button "
-                                                    id="travellerInfoReturn " data-bs-toggle="dropdown "
-                                                    aria-expanded="false ">
+                                        <div class="col-12 col-lg-6 col-xl-3 ps-0 mb-2 mb-lg-0 mb-xl-0 pe-0 pe-lg-2">
+                                            <div class="dropdown" id="myDDReturn">
+                                                <button class="dropdown-toggle form-control" type="button"
+                                                    id="travellerInfoReturn" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
                                                     <i
-                                                        class="bi bi-person-lines-fill position-absolute h2 icon-pos "></i>
-                                                    <span class="text-truncate ">1 Traveller(s), Economy </span>
+                                                        class="bi bi-person-lines-fill position-absolute h2 icon-pos"></i>
+                                                    <span class="text-truncate" id="travellersInfoRound">1 Traveller(s), Economy </span>
                                                 </button>
-                                                <div class="dropdown-menu " aria-labelledby="travellerInfoReturn ">
-                                                    <ul class="drop-rest ">
+                                                <div class="dropdown-menu" aria-labelledby="travellerInfoReturn">
+                                                    <ul class="drop-rest">
                                                         <li>
-                                                            <div class="d-flex ">Select Adults</div>
-                                                            <div class="ms-auto input-group plus-minus-input ">
-                                                                <div class="input-group-button ">
-                                                                    <button type="button " class="circle "
-                                                                        data-quantity="minus " data-field="onewayAdult ">
-                                                                        <i class="bi bi-dash "></i>
+                                                            <div class="d-flex">Select Adults</div>
+                                                            <div class="ms-auto input-group plus-minus-input">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="circle"
+                                                                        data-quantity="minus" data-field="roundAdult" onclick="travellersHandlerRound('minus')">
+                                                                        <i class="bi bi-dash"></i>
                                                                     </button>
                                                                 </div>
-                                                                <input class="input-group-field " type="number "
-                                                                    name="onewayAdult " value="0 ">
-                                                                <div class="input-group-button ">
-                                                                    <button type="button " class="circle "
-                                                                        data-quantity="plus " data-field="onewayAdult ">
-                                                                        <i class="bi bi-plus "></i>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="d-flex ">Select Child</div>
-                                                            <div class="ms-auto input-group plus-minus-input ">
-                                                                <div class="input-group-button ">
-                                                                    <button type="button " class="circle "
-                                                                        data-quantity="minus " data-field="onewayChild ">
-                                                                        <i class="bi bi-dash "></i>
-                                                                    </button>
-                                                                </div>
-                                                                <input class="input-group-field " type="number "
-                                                                    name="onewayChild " value="0 ">
-                                                                <div class="input-group-button ">
-                                                                    <button type="button " class="circle "
-                                                                        data-quantity="plus " data-field="onewayChild ">
-                                                                        <i class="bi bi-plus "></i>
+                                                                <input class="input-group-field" type="number"
+                                                                    name="roundAdult" value="0">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="circle"
+                                                                        data-quantity="plus" data-field="roundAdult" onclick="travellersHandlerRound('plus')">
+                                                                        <i class="bi bi-plus"></i>
                                                                     </button>
                                                                 </div>
                                                             </div>
                                                         </li>
                                                         <li>
-                                                            <div class="d-flex ">Select Infants</div>
-                                                            <div class="ms-auto input-group plus-minus-input ">
-                                                                <div class="input-group-button ">
-                                                                    <button type="button " class="circle "
-                                                                        data-quantity="minus " data-field="onewayInfant ">
-                                                                        <i class="bi bi-dash "></i>
+                                                            <div class="d-flex">Select Child</div>
+                                                            <div class="ms-auto input-group plus-minus-input">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="circle"
+                                                                        data-quantity="minus" data-field="roundChild" onclick="travellersHandlerRound('minus')">
+                                                                        <i class="bi bi-dash"></i>
                                                                     </button>
                                                                 </div>
-                                                                <input class="input-group-field " type="number "
-                                                                    name="onewayInfant " value="0 ">
-                                                                <div class="input-group-button ">
-                                                                    <button type="button " class="circle "
-                                                                        data-quantity="plus " data-field="onewayInfant ">
-                                                                        <i class="bi bi-plus "></i>
+                                                                <input class="input-group-field" type="number"
+                                                                    name="roundChild" value="0">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="circle"
+                                                                        data-quantity="plus" data-field="roundChild" onclick="travellersHandlerRound('plus')">
+                                                                        <i class="bi bi-plus"></i>
                                                                     </button>
                                                                 </div>
                                                             </div>
                                                         </li>
                                                         <li>
-                                                            <label class="radio-inline ">
-                                                                <input type="radio " name="class " value="Economy "
-                                                                    class="me-2 ">Economy </label>
+                                                            <div class="d-flex">Select Infants</div>
+                                                            <div class="ms-auto input-group plus-minus-input">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="circle"
+                                                                        data-quantity="minus" data-field="roundInfant" onclick="travellersHandlerRound('minus')">
+                                                                        <i class="bi bi-dash"></i>
+                                                                    </button>
+                                                                </div>
+                                                                <input class="input-group-field" type="number"
+                                                                    name="roundInfant" value="0">
+                                                                <div class="input-group-button">
+                                                                    <button type="button" class="circle"
+                                                                        data-quantity="plus" data-field="roundInfant" onclick="travellersHandlerRound('plus')">
+                                                                        <i class="bi bi-plus"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
                                                         </li>
                                                         <li>
-                                                            <label class="radio-inline ">
-                                                                <input type="radio " name="class " value="Special "
-                                                                    class="me-2 ">Premium Economy </label>
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="class" value="Economy"
+                                                                    class="me-2">Economy </label>
                                                         </li>
                                                         <li>
-                                                            <label class="radio-inline ">
-                                                                <input type="radio " name="class " value="Business "
-                                                                    class="me-2 ">Business </label>
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="class" value="Premium_Economy"
+                                                                    class="me-2">Premium Economy </label>
                                                         </li>
                                                         <li>
-                                                            <label class="radio-inline ">
-                                                                <input type="radio " name="class " value="First "
-                                                                    class="me-2 ">First Class </label>
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="class" value="Business"
+                                                                    class="me-2">Business </label>
                                                         </li>
                                                         <li>
-                                                            <button type="button " class="btn btn "
-                                                                onclick="">Done</button>
+                                                            <label class="radio-inline">
+                                                                <input type="radio" name="class" value="First"
+                                                                    class="me-2">First Class </label>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn btn"
+                                                            onclick="closeMenu()">Done</button>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 col-lg-6 col-xl-2 px-0 ">
-                                            <button type="submit " class="btn btn-search "
+                                        <div class="col-12 col-lg-6 col-xl-2 px-0">
+                                            <button type="submit" class="btn btn-search"
                                                 onclick="window.location.href='flight-listing-round-trip.html';">
-                                                <span class="fw-bold ">Search</span>
+                                                <span class="fw-bold">Search</span>
                                             </button>
                                         </div>
                                     </div>

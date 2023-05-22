@@ -48,7 +48,9 @@
                         <a class="navbar-brand ms-5" href="index.html">
                             <img src="assets/images/logo.png" alt="Brand Logo" title="Brand Logo" class="img-fluid">
                         </a>
-                        <button class="navbar-toggler px-1 btn rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler px-1 btn rounded-0" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -58,7 +60,7 @@
                                         <div class="dropdown-toggle click-dropdown">
                                             <i class="bi bi-person-circle"></i>
                                             Account
-        
+
                                         </div>
                                         <div class="dropdown-menu">
                                             <ul>
@@ -83,668 +85,188 @@
                     <!-- Nav tabs -->
                     <!-- Tab content -->
                     <div class="tab-content">
-                        <!-- oneway search -->
-                        <!-- <div id="oneway" class="tab-pane active">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="search-pan row mx-0 theme-border-radius">
-                                        <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
-                                            <div class="form-group">
-                                                <i class="bi bi-geo-alt-fill position-absolute h2 icon-pos"></i>
-                                                <input type="text" class="form-control ps-5" id="onewayOrigin"
-                                                    placeholder="Origin">
-                                                <button class="pos-swap"><i
-                                                        class="bi bi-arrow-left-right pl-1"></i></button>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
-                                            <div class="form-group">
-                                                <i class="bi bi-geo-alt-fill position-absolute h2 icon-pos"></i>
-                                                <input type="text" class="form-control ps-5" id="onewayDestination"
-                                                    placeholder="Destination">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2">
-                                            <div class="form-control form-group d-flex">
-                                                <i class="bi bi-calendar3 position-absolute h2 icon-pos"></i>
-                                                <span class="dep-date-input">
-                                                    <input type="text" class="cal-input" placeholder="Depart Date"
-                                                        id="datepicker">
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-6 col-xl-3 ps-0 mb-2 mb-lg-0 mb-xl-0 pe-0 pe-lg-2">
-                                            <div class="dropdown" id="myDD">
-                                                <button class="dropdown-toggle form-control" type="button"
-                                                    id="travellerInfoOneway" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
-                                                    <i
-                                                        class="bi bi-person-lines-fill position-absolute h2 icon-pos"></i>
-                                                    <span class="text-truncate">1 Traveller(s), Economy </span>
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="travellerInfoOneway">
-                                                    <ul class="drop-rest">
-                                                        <li>
-                                                            <div class="d-flex">Select Adults</div>
-                                                            <div class="ms-auto input-group plus-minus-input">
-                                                                <div class="input-group-button">
-                                                                    <button type="button" class="circle"
-                                                                        data-quantity="minus" data-field="onewayAdult">
-                                                                        <i class="bi bi-dash"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <input class="input-group-field" type="number"
-                                                                    name="onewayAdult" value="0">
-                                                                <div class="input-group-button">
-                                                                    <button type="button" class="circle"
-                                                                        data-quantity="plus" data-field="onewayAdult">
-                                                                        <i class="bi bi-plus"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="d-flex">Select Child</div>
-                                                            <div class="ms-auto input-group plus-minus-input">
-                                                                <div class="input-group-button">
-                                                                    <button type="button" class="circle"
-                                                                        data-quantity="minus" data-field="onewayChild">
-                                                                        <i class="bi bi-dash"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <input class="input-group-field" type="number"
-                                                                    name="onewayChild" value="0">
-                                                                <div class="input-group-button">
-                                                                    <button type="button" class="circle"
-                                                                        data-quantity="plus" data-field="onewayChild">
-                                                                        <i class="bi bi-plus"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="d-flex">Select Infants</div>
-                                                            <div class="ms-auto input-group plus-minus-input">
-                                                                <div class="input-group-button">
-                                                                    <button type="button" class="circle"
-                                                                        data-quantity="minus" data-field="onewayInfant">
-                                                                        <i class="bi bi-dash"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <input class="input-group-field" type="number"
-                                                                    name="onewayInfant" value="0">
-                                                                <div class="input-group-button">
-                                                                    <button type="button" class="circle"
-                                                                        data-quantity="plus" data-field="onewayInfant">
-                                                                        <i class="bi bi-plus"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <label class="radio-inline">
-                                                                <input type="radio" name="class" value="Economy"
-                                                                    class="me-2">Economy </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="radio-inline">
-                                                                <input type="radio" name="class" value="Special"
-                                                                    class="me-2">Premium Economy </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="radio-inline">
-                                                                <input type="radio" name="class" value="Business"
-                                                                    class="me-2">Business </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="radio-inline">
-                                                                <input type="radio" name="class" value="First"
-                                                                    class="me-2">First Class </label>
-                                                        </li>
-                                                        <li>
-                                                            <button type="button" class="btn btn"
-                                                                onclick="">Done</button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-6 col-xl-2 px-0">
-                                            <button type="submit" class="btn btn-search"
-                                                onclick="window.location.href='flight-listing-oneway.html';">
-                                                <span class="fw-bold">Search</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 mt-4">
+
+                        <!-- body section -->
+
+                        <!-- filter section -->
+
+                        <div class="content-section">
+                            <!-- flight result page - oneway start -->
+                            <div class="srp py-2">
+                                <div class="container">
                                     <div class="row">
-                                        <div class="col-12">
-                                            <div class="form-check-inline">
-                                                <label class="check-wrap">Refundable Flights
-                                                    <input type="checkbox">
-                                                    <span class="checkmark"></span> </label>
-                                            </div>
-                                            <div class="form-check-inline">
-                                                <label class="check-wrap"> Non Stop Flights
-                                                    <input type="checkbox">
-                                                    <span class="checkmark"></span> </label>
-                                            </div>
-                                            <div class="form-check-inline">
-                                                <label class="check-wrap"> GDS Special Return
-                                                    <input type="checkbox">
-                                                    <span class="checkmark"></span> </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- Return search -->
-                        <div id="return" class="tab-pane fade">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-12">
-                                    <div class="search-pan row mx-0 theme-border-radius">
-                                        <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
-                                            <div class="form-group">
-                                                <i class="bi bi-geo-alt-fill position-absolute h2 icon-pos"></i>
-                                                <input type="text" class="form-control ps-5" id="returnOrigin"
-                                                    placeholder="Origin">
-                                                <button class="pos-swap"><i
-                                                        class="bi bi-arrow-left-right pl-1"></i></button>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
-                                            <div class="form-group">
-                                                <i class="bi bi-geo-alt-fill position-absolute h2 icon-pos"></i>
-                                                <input type="text" class="form-control ps-5" id="returnDestination"
-                                                    placeholder="Destination">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2">
-                                            <div class="form-control form-group d-flex">
-                                                <i class="bi bi-calendar3 position-absolute h2 icon-pos"></i>
-                                                <span class="dep-date-input">
-                                                    <input type="text" class="cal-input" placeholder="Depart Date"
-                                                        id="datepicker1">
-                                                </span>
-                                                <span class="arv-date-input ms-2">
-                                                    <input type="text" class="cal-input" placeholder="Return Date"
-                                                        id="datepickerNull">
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-6 col-xl-3 ps-0 mb-2 mb-lg-0 mb-xl-0 pe-0 pe-lg-2">
-                                            <div class="dropdown" id="myDDReturn">
-                                                <button class="dropdown-toggle form-control" type="button"
-                                                    id="travellerInfoReturn" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
-                                                    <i
-                                                        class="bi bi-person-lines-fill position-absolute h2 icon-pos"></i>
-                                                    <span class="text-truncate">1 Traveller(s), Economy </span>
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="travellerInfoReturn">
-                                                    <ul class="drop-rest">
-                                                        <li>
-                                                            <div class="d-flex">Select Adults</div>
-                                                            <div class="ms-auto input-group plus-minus-input">
-                                                                <div class="input-group-button">
-                                                                    <button type="button" class="circle"
-                                                                        data-quantity="minus" data-field="onewayAdult">
-                                                                        <i class="bi bi-dash"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <input class="input-group-field" type="number"
-                                                                    name="onewayAdult" value="0">
-                                                                <div class="input-group-button">
-                                                                    <button type="button" class="circle"
-                                                                        data-quantity="plus" data-field="onewayAdult">
-                                                                        <i class="bi bi-plus"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="d-flex">Select Child</div>
-                                                            <div class="ms-auto input-group plus-minus-input">
-                                                                <div class="input-group-button">
-                                                                    <button type="button" class="circle"
-                                                                        data-quantity="minus" data-field="onewayChild">
-                                                                        <i class="bi bi-dash"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <input class="input-group-field" type="number"
-                                                                    name="onewayChild" value="0">
-                                                                <div class="input-group-button">
-                                                                    <button type="button" class="circle"
-                                                                        data-quantity="plus" data-field="onewayChild">
-                                                                        <i class="bi bi-plus"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="d-flex">Select Infants</div>
-                                                            <div class="ms-auto input-group plus-minus-input">
-                                                                <div class="input-group-button">
-                                                                    <button type="button" class="circle"
-                                                                        data-quantity="minus" data-field="onewayInfant">
-                                                                        <i class="bi bi-dash"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <input class="input-group-field" type="number"
-                                                                    name="onewayInfant" value="0">
-                                                                <div class="input-group-button">
-                                                                    <button type="button" class="circle"
-                                                                        data-quantity="plus" data-field="onewayInfant">
-                                                                        <i class="bi bi-plus"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <label class="radio-inline">
-                                                                <input type="radio" name="class" value="Economy"
-                                                                    class="me-2">Economy </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="radio-inline">
-                                                                <input type="radio" name="class" value="Special"
-                                                                    class="me-2">Premium Economy </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="radio-inline">
-                                                                <input type="radio" name="class" value="Business"
-                                                                    class="me-2">Business </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="radio-inline">
-                                                                <input type="radio" name="class" value="First"
-                                                                    class="me-2">First Class </label>
-                                                        </li>
-                                                        <li>
-                                                            <button type="button" class="btn btn"
-                                                                onclick="">Done</button>
-                                                        </li>
-                                                    </ul>
+                                        <div class="col-12 my-2">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div>
+                                                    <div style="color:antiquewhite;" class="fw-bold" id="directionOW"></div>
+                                                    <div style="color:antiquewhite;" class="mb-1 font-small" id="flightDate"></div>
+                                                </div>
+                                                <div>
+                                                    <!-- <span class="font-small" id>Showing 118 of 118 flights.</span> -->
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-12 col-lg-6 col-xl-2 px-0">
-                                            <button type="submit" class="btn btn-search"
-                                                onclick="window.location.href='flight-listing-round-trip.html';">
-                                                <span class="fw-bold">Search</span>
-                                            </button>
-                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Multicity search -->
-                        <div id="multiCity" class="tab-pane fade">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-12">
-                                    <div class="search-pan row mx-0 theme-border-radius">
-                                        <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-12 mb-3">
                                             <div class="row">
-                                                <div class="col-12 col-lg-6 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
-                                                    <div class="form-group">
-                                                        <i class="bi bi-geo-alt-fill position-absolute h2 icon-pos"></i>
-                                                        <input type="text" class="form-control ps-5" id="multiOrigin"
-                                                            placeholder="Origin">
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="col-12 col-lg-6 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2">
-                                                    <div class="form-group">
-                                                        <i class="bi bi-geo-alt-fill position-absolute h2 icon-pos"></i>
-                                                        <input type="text" class="form-control ps-5"
-                                                            id="multiDestination" placeholder="Destination">
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="col-12 col-lg-6 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2 pe-xl-2">
-                                                    <div class="form-control form-group d-flex">
-                                                        <i class="bi bi-calendar3 position-absolute h2 icon-pos"></i>
-                                                        <span class="dep-date-input">
-                                                            <input type="text" class="cal-input"
-                                                                placeholder="Depart Date" id="datepicker3">
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="col-12 col-lg-6 col-xl-4 ps-0 mb-2 mb-lg-0 mb-xl-0 pe-0 pe-lg-0 pe-xl-0">
-                                                    <div class="dropdown" id="myDDRound">
-                                                        <button class="dropdown-toggle form-control" type="button"
-                                                            id="travellerInfoMulti" data-bs-toggle="dropdown"
-                                                            aria-expanded="false">
-                                                            <i
-                                                                class="bi bi-person-lines-fill position-absolute h2 icon-pos"></i>
-                                                            <span class="text-truncate">1 Traveller(s), Economy </span>
-                                                        </button>
-                                                        <div class="dropdown-menu" aria-labelledby="travellerInfoMulti">
-                                                            <ul class="drop-rest">
-                                                                <li>
-                                                                    <div class="d-flex">Select Adults</div>
-                                                                    <div class="ms-auto input-group plus-minus-input">
-                                                                        <div class="input-group-button">
-                                                                            <button type="button" class="circle"
-                                                                                data-quantity="minus"
-                                                                                data-field="onewayAdult">
-                                                                                <i class="bi bi-dash"></i>
-                                                                            </button>
-                                                                        </div>
-                                                                        <input class="input-group-field" type="number"
-                                                                            name="onewayAdult" value="0">
-                                                                        <div class="input-group-button">
-                                                                            <button type="button" class="circle"
-                                                                                data-quantity="plus"
-                                                                                data-field="onewayAdult">
-                                                                                <i class="bi bi-plus"></i>
-                                                                            </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="d-flex">Select Child</div>
-                                                                    <div class="ms-auto input-group plus-minus-input">
-                                                                        <div class="input-group-button">
-                                                                            <button type="button" class="circle"
-                                                                                data-quantity="minus"
-                                                                                data-field="onewayChild">
-                                                                                <i class="bi bi-dash"></i>
-                                                                            </button>
-                                                                        </div>
-                                                                        <input class="input-group-field" type="number"
-                                                                            name="onewayChild" value="0">
-                                                                        <div class="input-group-button">
-                                                                            <button type="button" class="circle"
-                                                                                data-quantity="plus"
-                                                                                data-field="onewayChild">
-                                                                                <i class="bi bi-plus"></i>
-                                                                            </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <div class="d-flex">Select Infants</div>
-                                                                    <div class="ms-auto input-group plus-minus-input">
-                                                                        <div class="input-group-button">
-                                                                            <button type="button" class="circle"
-                                                                                data-quantity="minus"
-                                                                                data-field="onewayInfant">
-                                                                                <i class="bi bi-dash"></i>
-                                                                            </button>
-                                                                        </div>
-                                                                        <input class="input-group-field" type="number"
-                                                                            name="onewayInfant" value="0">
-                                                                        <div class="input-group-button">
-                                                                            <button type="button" class="circle"
-                                                                                data-quantity="plus"
-                                                                                data-field="onewayInfant">
-                                                                                <i class="bi bi-plus"></i>
-                                                                            </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                                <li>
-                                                                    <label class="radio-inline">
-                                                                        <input type="radio" name="class" value="Economy"
-                                                                            class="me-2">Economy </label>
-                                                                </li>
-                                                                <li>
-                                                                    <label class="radio-inline">
-                                                                        <input type="radio" name="class" value="Special"
-                                                                            class="me-2">Premium Economy </label>
-                                                                </li>
-                                                                <li>
-                                                                    <label class="radio-inline">
-                                                                        <input type="radio" name="class"
-                                                                            value="Business" class="me-2">Business
-                                                                    </label>
-                                                                </li>
-                                                                <li>
-                                                                    <label class="radio-inline">
-                                                                        <input type="radio" name="class" value="First"
-                                                                            class="me-2">First Class </label>
-                                                                </li>
-                                                                <li>
-                                                                    <button type="button" class="btn btn"
-                                                                        onclick="">Done</button>
-                                                                </li>
-                                                            </ul>
+                                                <div class="col-12 col-md-12 d-none d-md-block">
+                                                    <div
+                                                        class="row g-0 border theme-border-radius p-2 theme-bg-accent-three">
+                                                        <div class="col-md-3">
+                                                            <span class="font-small fw-bold">Airline</span>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <span class="font-small fw-bold">Depart</span>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <span class="font-small fw-bold">Duration</span>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <span class="font-small fw-bold">Arrive</span>
+                                                        </div>
+                                                        <div class="col-md-3 text-md-center">
+                                                            <span class="font-small fw-bold">Price
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="row mt-0 mt-md-0 mt-lg-0 mt-xl-2">
-                                                <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
-                                                    <div class="form-group">
-                                                        <i class="bi bi-geo-alt-fill position-absolute h2 icon-pos"></i>
-                                                        <input type="text" class="form-control ps-5" id="multiOrigin2"
-                                                            placeholder="Origin">
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
-                                                    <div class="form-group">
-                                                        <i class="bi bi-geo-alt-fill position-absolute h2 icon-pos"></i>
-                                                        <input type="text" class="form-control ps-5"
-                                                            id="multiDestination2" placeholder="Destination">
-                                                    </div>
-                                                </div>
-                                                <div
-                                                    class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2">
-                                                    <div class="form-control form-group d-flex">
-                                                        <i class="bi bi-calendar3 position-absolute h2 icon-pos"></i>
-                                                        <span class="dep-date-input">
-                                                            <input type="text" class="cal-input"
-                                                                placeholder="Depart Date" id="datepicker4">
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12 col-lg-12 col-xl-4 px-0">
-                                                    <div class="row">
-                                                        <div
-                                                            class="col-12 col-lg-6 col-xl-7 mb-2 mb-md-2 mb-lg-0 d-flex justify-content-center align-items-center">
-                                                            <button type="submit" class="btn btn-light" id="add-button">
-                                                                <span class="fw-bold">+ Add City</span> </button>
-                                                            <button type="submit" class="btn" id="remove-button"> <span
-                                                                    class="fw-bold">Close</span> </button>
-                                                        </div>
-                                                        <div class="col-12 col-lg-6 col-xl-5">
-                                                            <button type="submit" class="btn btn-search"
-                                                                onclick="window.location.href='flight-listing-multicity.html';">
-                                                                <span class="fw-bold">Search</span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- body section -->
-        
-        <!-- filter section -->
-    
-        <div class="content-section">
-            <!-- flight result page - oneway start -->
-            <div class="srp py-2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 my-2">
-                            <div class="d-flex justify-content-between align-items-start">
-                                <div>
-                                    <div class="fw-bold" id="directionOW">Berlin (BER)<i class="bi bi-arrow-right mx-2"></i>London (LHR)
-                                    </div>
-                                    <div class="mb-1 font-small" id="flightDate">Sun, Mar 30</div>
-                                </div>
-                                <div>
-                                    <!-- <span class="font-small" id>Showing 118 of 118 flights.</span> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 mb-3">
-                            <div class="row">
-                                <div class="col-12 col-md-12 d-none d-md-block">
-                                    <div class="row g-0 border theme-border-radius p-2 theme-bg-accent-three">
-                                        <div class="col-md-3">
-                                            <span class="font-small fw-bold">Airline</span>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <span class="font-small fw-bold">Depart</span>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <span class="font-small fw-bold">Duration</span>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <span class="font-small fw-bold">Arrive</span>
-                                        </div>
-                                        <div class="col-md-3 text-md-center">
-                                            <span class="font-small fw-bold">Price<i class="bi bi-arrow-up"></i>
-                                                <input type="checkbox" class="cursor-pointer">
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-12 d-md-block d-md-none">
+                                                <!-- <div class="col-12 col-md-12 d-md-block d-md-none">
                                     <button class="btn w-100 border theme-border-radius p-2 theme-bg-accent-three"
                                         type="button">
                                         <i class="bi bi-sliders me-2"></i><span class="visible-xs font-medium">Sort
                                             Depart</span>
                                     </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row" id="flightsList">
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-        <!-- page footer section -->
-        <footer class="footer" id="footerSec">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-6 pt-5">
-                        <img src="assets/images/logoWhite.png" class="img-fluid" alt="Brand color white"
-                            title="Brand color white">
-                        <p class="text-justify pt-5">Flight World Travel Agent dashboard is a specialized travel service
-                            for organizations from flightworld.com</p>
-                        <p class="pt-lg-5">Get Latest Deals, Upcoming Flight Offers and Cheap Fare</p>
-                        <form class="form">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control py-3 rounded-0" id="inputPassword2"
-                                            placeholder="Enter your email address">
-                                        <button type="button"
-                                            class="btn btn-outline-light rounded-0 custom-btn-subscribe btn-effect">Subscribe</button>
+                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" id="flightsList">
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                        <div class="col-12 mt-5">
-                            <img src="assets/images/tafi.svg" class="img-fluid me-4" alt="tafi" title="tafi">
-                            <img src="assets/images/taai.svg" class="img-fluid" alt="taai" title="taai">
+
+
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-6 pt-5">
-                        <img src="assets/images/iata.svg" class="img-fluid d-inline-flex" alt="IATA" title="IATA">
-                        <p class="fw-bold text-uppercase mb-0 ms-2 d-inline-flex">We are an IATA Certified travel agency
-                        </p>
-                        <div class="row">
-                            <div class="col-md-4 mt-5">
-                                <p class="text-uppercase fw-bold mb-4">About Us</p>
-                                <ul class="fl-menu">
-                                    <li class="nav-item"><a href="about.html">About</a></li>
-                                    <li class="nav-item"><a href="contact.html">Contact us</a></li>
-                                    <li class="nav-item"><a href="#">Bank Details</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 mt-5">
-                                <p class="text-uppercase fw-bold">Legal</p>
-                                <ul class="fl-menu">
-                                    <li class="nav-item"><a href="privacy.html">Privacy</a></li>
-                                    <li class="nav-item"><a href="#">T&C</a></li>
-                                    <li class="nav-item"><a href="#">Disclaimer</a></li>
-                                    <li class="nav-item"><a href="#">Privacy and Cookies</a></li>
-                                    <li class="nav-item"><a href="#">Legal</a></li>
-                                    <li class="nav-item"><a href="#">Help</a></li>
-                                    <li class="nav-item"><a href="#">Feedback</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 mt-5">
-                                <p class="text-uppercase fw-bold">Company</p>
-                                <ul class="fl-menu">
-                                    <li class="nav-item"><a href="#">Partner With Us</a></li>
-                                    <li class="nav-item"><a href="#">Services</a></li>
-                                    <li class="nav-item"><a href="#">Careers</a></li>
-                                    <li class="nav-item"><a href="#">Products</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-0 pt-5">
-                    <div class="col-12 border-top border-bottom">
-                        <div class="row">
-                            <div class="col-12 col-lg-4 text-start py-3">
-                                <p class="d-inline-flex text-uppercase mb-0">Follow Us</p>
-                                <div class="d-inline-flex social">
-                                    <a href="#" class="ps-3"><i class="bi bi-facebook"></i></a>
-                                    <a href="#" class="ps-3"><i class="bi bi-twitter"></i></a>
-                                    <a href="#" class="ps-3"><i class="bi bi-linkedin"></i></a>
-                                    <a href="#" class="ps-3"><i class="bi bi-instagram"></i></a>
+                        <!-- page footer section -->
+                        <footer class="footer" id="footerSec">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-lg-6 pt-5">
+                                        <img src="assets/images/logoWhite.png" class="img-fluid" alt="Brand color white"
+                                            title="Brand color white">
+                                        <p class="text-justify pt-5">Flight World Travel Agent dashboard is a
+                                            specialized travel service
+                                            for organizations from flightworld.com</p>
+                                        <p class="pt-lg-5">Get Latest Deals, Upcoming Flight Offers and Cheap Fare</p>
+                                        <form class="form">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control py-3 rounded-0"
+                                                            id="inputPassword2" placeholder="Enter your email address">
+                                                        <button type="button"
+                                                            class="btn btn-outline-light rounded-0 custom-btn-subscribe btn-effect">Subscribe</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <div class="col-12 mt-5">
+                                            <img src="assets/images/tafi.svg" class="img-fluid me-4" alt="tafi"
+                                                title="tafi">
+                                            <img src="assets/images/taai.svg" class="img-fluid" alt="taai" title="taai">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 pt-5">
+                                        <img src="assets/images/iata.svg" class="img-fluid d-inline-flex" alt="IATA"
+                                            title="IATA">
+                                        <p class="fw-bold text-uppercase mb-0 ms-2 d-inline-flex">We are an IATA
+                                            Certified travel agency
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-md-4 mt-5">
+                                                <p class="text-uppercase fw-bold mb-4">About Us</p>
+                                                <ul class="fl-menu">
+                                                    <li class="nav-item"><a href="about.html">About</a></li>
+                                                    <li class="nav-item"><a href="contact.html">Contact us</a></li>
+                                                    <li class="nav-item"><a href="#">Bank Details</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4 mt-5">
+                                                <p class="text-uppercase fw-bold">Legal</p>
+                                                <ul class="fl-menu">
+                                                    <li class="nav-item"><a href="privacy.html">Privacy</a></li>
+                                                    <li class="nav-item"><a href="#">T&C</a></li>
+                                                    <li class="nav-item"><a href="#">Disclaimer</a></li>
+                                                    <li class="nav-item"><a href="#">Privacy and Cookies</a></li>
+                                                    <li class="nav-item"><a href="#">Legal</a></li>
+                                                    <li class="nav-item"><a href="#">Help</a></li>
+                                                    <li class="nav-item"><a href="#">Feedback</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4 mt-5">
+                                                <p class="text-uppercase fw-bold">Company</p>
+                                                <ul class="fl-menu">
+                                                    <li class="nav-item"><a href="#">Partner With Us</a></li>
+                                                    <li class="nav-item"><a href="#">Services</a></li>
+                                                    <li class="nav-item"><a href="#">Careers</a></li>
+                                                    <li class="nav-item"><a href="#">Products</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="row g-0 pt-5">
+                                    <div class="col-12 border-top border-bottom">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-4 text-start py-3">
+                                                <p class="d-inline-flex text-uppercase mb-0">Follow Us</p>
+                                                <div class="d-inline-flex social">
+                                                    <a href="#" class="ps-3"><i class="bi bi-facebook"></i></a>
+                                                    <a href="#" class="ps-3"><i class="bi bi-twitter"></i></a>
+                                                    <a href="#" class="ps-3"><i class="bi bi-linkedin"></i></a>
+                                                    <a href="#" class="ps-3"><i class="bi bi-instagram"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-4 text-lg-center social py-3">
+                                                <p class="d-inline-flex text-uppercase mb-0">Support Center:</p>
+                                                <a href="#" class="botom-link">(769) 25698745</a>
+                                            </div>
+                                            <div class="col-12 col-lg-4 text-lg-end social py-3">
+                                                <a href="mailto:support@example.com"
+                                                    class="botom-link">support@example.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="text-center py-5 mb-0 font-small">©2022 Flight World Pwt Lcd. All
+                                            Rights Reserved.
+                                        </p>
+                                    </div>
+                                </div>
+
                             </div>
-                            <div class="col-12 col-lg-4 text-lg-center social py-3">
-                                <p class="d-inline-flex text-uppercase mb-0">Support Center:</p>
-                                <a href="#" class="botom-link">(769) 25698745</a>
-                            </div>
-                            <div class="col-12 col-lg-4 text-lg-end social py-3">
-                                <a href="mailto:support@example.com" class="botom-link">support@example.com</a>
-                            </div>
-                        </div>
+                            <p id="back-top" class="back-to-top bg-dark" style="display: block;">
+                                <a href="#top"><i class="bi bi-chevron-up"></i></a>
+                            </p>
+                        </footer>
+
                     </div>
-                    <div class="col-12">
-                        <p class="text-center py-5 mb-0 font-small">©2022 Flight World Pwt Lcd. All Rights Reserved.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-            <p id="back-top" class="back-to-top bg-dark" style="display: block;">
-                <a href="#top"><i class="bi bi-chevron-up"></i></a>
-            </p>
-        </footer>
-
-    </div>
 
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!--This page JavaScript -->
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <!--Data Calendar js -->
-    <script src="assets/js/jquery-ui.js"></script>
-    <!--Traveler counter js -->
-    <script src="assets/js/counter.js"></script>
-    <!-- animation aos library -->
-    <script src="assets/js/aos.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/flightsListing.js"></script>
+                    <!-- Option 1: Bootstrap Bundle with Popper -->
+                    <script src="assets/js/bootstrap.bundle.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                    <!--This page JavaScript -->
+                    <script src="assets/js/owl.carousel.min.js"></script>
+                    <!--Data Calendar js -->
+                    <script src="assets/js/jquery-ui.js"></script>
+                    <!--Traveler counter js -->
+                    <script src="assets/js/counter.js"></script>
+                    <!-- animation aos library -->
+                    <script src="assets/js/aos.js"></script>
+                    <script src="assets/js/main.js"></script>
+                    <script src="assets/js/flightsListing.js"></script>
 </body>
 
 </html>
