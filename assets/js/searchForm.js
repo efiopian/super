@@ -57,10 +57,10 @@ OWDestination.addEventListener('input', function () {
 });
 
 function searchHandler() {
-    const onewayOrigin = document.getElementById('returnOrigin');
-    const onewayDestination = document.getElementById('returnDestination');
-    const date1 = document.getElementById("datepicker3");
-    const date2 = document.getElementById("datepicker4");
+    const onewayOrigin = document.getElementById('onewayOrigin');
+    const onewayDestination = document.getElementById('onewayDestination');
+    const date = document.getElementById("datepicker");
+    // const date2 = document.getElementById("datepicker4");
     const adults = document.querySelector('input[name="onewayAdult"]').value;
     const children = document.querySelector('input[name="onewayChild"]').value;
     const infants = document.querySelector('input[name="onewayInfant"]').value;

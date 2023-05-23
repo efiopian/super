@@ -1,7 +1,7 @@
 // Define the API endpoint URL
 
 const API_KEY = '6454fd47cf9a27e29dd12b36';
-const FLIGHTS_API_URL = `https://api.flightapi.io/roundtrip/${API_KEY}`;
+const FLIGHTS_API_URL = `https://api.flightapi.io/onewaytrip/${API_KEY}`;
 // Fetch data from the API
 
 const onewayOrigin = localStorage.getItem('onewayOrigin');
@@ -29,7 +29,7 @@ document.querySelector("#flightDate").textContent = localStorage.getItem('date')
 let formattedDate = date.split("/");
 formattedDate = `${formattedDate[2]}-${formattedDate[0]}-${formattedDate[1]}`;
 
-const url = `${FLIGHTS_API_URL}/${onewayOriginIata}/${onewayDestinationIata}/${formattedDate}/2023-07-01/${adults || 1}/${children || 0}/${infants || 0}/${travelClass || "Economy"}/USD`;
+const url = `${FLIGHTS_API_URL}/${onewayOriginIata}/${onewayDestinationIata}/${formattedDate}/${adults || 1}/${children || 0}/${infants || 0}/${travelClass || "Economy"}/USD`;
 
 fetch(url)
     .then(response => response.json())
@@ -86,7 +86,11 @@ fetch(url)
         </div>
         <div class="col-12 col-md-3 text-center mt-md-0 mt-2">
             <div class="fw-bold"><i class="bi bi-currency-dollar ms-2"></i>${flightFare.price.amount}</div>
-            <button type="submit" class="btn-select btn btn-effect" onclick="window.location.href='review-booking.html';">
+            <button type="submit" class="btn-select btn btn-effect" 
+            onclick="onSelectFlight(event);window.location.href='traveller-details.html';"
+            // onclick="window.location.href='review-booking.html';"
+            
+            >
                 <span class="font-small">Select</span>
             </button>
         </div>
@@ -100,3 +104,14 @@ fetch(url)
     .catch(error => {
         console.error(error);
     });
+
+    function onSelectFlight(event) {
+        const button = event.target; // Get the clicked button element
+        const parentElement = button.closest('[data-aos]:defined'); // Replace '.parent-class' with the actual class or selector of the parent element you want to target
+      
+        // Do something with the parent element
+        localStorage.setItem("price", parentElement.dataset.ticketprice);
+        localStorage.setItem("selectedLeg", parentElement.dataset.legid);
+
+        // console.log(parentElement);    
+    }
