@@ -61,7 +61,7 @@ function searchHandler() {
     const onewayDestination = document.getElementById('onewayDestination');
     const date = document.getElementById("datepicker");
     // const date2 = document.getElementById("datepicker4");
-    const adults = document.querySelector('input[name="onewayAdult"]').value;
+    const adults = +document.querySelector('input[name="onewayAdult"]').value || 1;
     const children = document.querySelector('input[name="onewayChild"]').value;
     const infants = document.querySelector('input[name="onewayInfant"]').value;
     let travelClass = document.querySelector('input[name="class"]:checked');
