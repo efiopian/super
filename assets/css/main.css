@@ -283,6 +283,7 @@ h1 {
 
 .dropdown-open .dropdown-menu.dropdown-active {
   display: block;
+  z-index: 15;
 }
 
 .dropdown-container.dropdown-open .dropdown-toggle {

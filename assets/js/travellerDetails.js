@@ -6,7 +6,7 @@ const peopleNum = adults + infants + children;
 let grandAmount = peopleNum*price;
 
 const element = document.querySelector("#grandAmount");
-element.textContent = grandAmount;4
+element.textContent = grandAmount;
 localStorage.setItem("grandAmount", grandAmount)
 
 function radioChange(event) {
