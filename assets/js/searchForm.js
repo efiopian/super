@@ -1,15 +1,36 @@
+const dropdowns = [document.querySelector("#dropdownOrigin"), document.querySelector("#dropdownDest")]
+
+dropdowns.forEach( (dropdown)=>{
+    const dropdownMenu = dropdown.querySelector(".dropdown-menu");
+    dropdownMenu.addEventListener("click", function (event) {
+        event.stopPropagation();
+        const clickedOption = event.target.closest(".dropdown-item");
+    
+        if (clickedOption) {
+          const value = clickedOption.getAttribute("data-value");
+          const input = event.target.offsetParent.previousElementSibling;
+          input.value = value;
+          dropdown.classList.remove("open");
+        }
+      });
+      document.addEventListener("click", function () {
+        dropdown.classList.remove("open");
+      });
+})
+
 // Airport Autocomplete
-function autocompleteCityAirport(input) {
+function autocompleteCityAirport(input, ) {
     if (input.value.length > 2) {
         // Get the list element
+        const dropdown = input.closest(".dropdown")
+        dropdown.classList.add("open");
 
-        const list = input.list;
 
         // Create a new XHR object
         const xhr = new XMLHttpRequest();
 
         // Prepare the request
-        xhr.open('GET', `https://api.flightapi.io/iata/6454fd47cf9a27e29dd12b36?name=${input.value}&type=airport&limit=10`, true);
+        xhr.open('GET', `https://api.flightapi.io/iata/6454fd47cf9a27e29dd12b36?name=${input.value}&type=airport&limit=30`, true);
 
         // Handle the response
         xhr.onload = function () {
@@ -17,14 +38,14 @@ function autocompleteCityAirport(input) {
                 // Parse the response
                 const response = JSON.parse(xhr.responseText);
                 // Clear the previous suggestions
-                list.innerHTML = '';
-
+                const dropdownMenu = dropdown.querySelector(".dropdown-menu")
+                dropdownMenu.innerHTML = '';
                 // Add the new suggestions
                 response.data.filter(result =>
-                    result.name.includes("Airport")).forEach(item => {
-                        const option = document.createElement('option');
-                        option.value = `${item.name} ${item.iata}`;
-                        list.appendChild(option);
+                    result.name.includes("Airport") && result.iata !== "").forEach(item => {
+                        const option = document.createElement('li');
+                        option.innerHTML = `<a class="dropdown-item" href="javascript:void(0)" data-value="${item.name} ${item.iata}">${item.name} ${item.iata}</a>`                       
+                        dropdownMenu.appendChild(option);
                     });
             } else {
                 console.log('Error:', xhr.status);
@@ -37,13 +58,14 @@ function autocompleteCityAirport(input) {
 }
 
 const OWorigin = document.getElementById('onewayOrigin');
-OWorigin.addEventListener('input', function () {
-    autocompleteCityAirport(this);
+OWorigin.addEventListener('input', function (event) {
+    console.log(event);
+    autocompleteCityAirport(this, event);
 });
 
 const OWDestination = document.getElementById('onewayDestination');
-OWDestination.addEventListener('input', function () {
-    autocompleteCityAirport(this);
+OWDestination.addEventListener('input', function (event) {
+    autocompleteCityAirport(this, event);
 });
 
 const RoundOrigin = document.getElementById('returnOrigin');

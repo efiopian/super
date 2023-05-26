@@ -54,9 +54,14 @@ let timesCalled = 0;
 let datai;
 function fetchFlights() {
     fetch(url)
-        .then(response => response.json())
+        .then(response => {
+            if(response.status === "404"){ throw new Error(respone.json())}
+            else{
+                return response.json()
+            }
+        })
         .then(data => {
-
+            console.dir(data)
             if (data.count !== 0) {
                 container.removeChild(placeholderElement);
                 const originCityCode = data.airports.filter(airport => airport.code === onewayOriginIata)[0].cityCode
@@ -147,8 +152,11 @@ function fetchFlights() {
 
         })
         .catch(error => {
-            console.error(error);
-        });
+            container.removeChild(placeholderElement);
+            const error = document.createElement('div');
+            error.classList.add("alert", "alert-danger", "mt-3", "error")
+            error.innerText = "Sorry, there was an issue. Please try changing the date or try again later. "
+            container.appendChild(error)        });
 
 }
 

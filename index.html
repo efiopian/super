@@ -13,6 +13,18 @@
     <link href="assets/css/main.css" rel="stylesheet">
     <!--title tag for page -->
     <title>FlightWorld</title>
+    <style>
+        .dropdown.open .dropdown-menu {
+            display: block;
+            top: 108%;
+            position: absolute;
+        }
+
+        .dropdown-item {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
 </head>
 
 <body class="theme-bg-white">
@@ -117,154 +129,173 @@
                     <!-- Tab content -->
                     <div class="tab-content">
                         <!-- oneway search -->
-                        <div id="oneway" class="tab-pane active">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="search-pan row mx-0 theme-border-radius">
-                                        <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
-                                            <div class="form-group">
-                                                <i class="bi bi-geo-alt-fill position-absolute h2 icon-pos"></i>
-                                                <input type="text" class="form-control ps-5" id="onewayOrigin"
-                                                    list="OWOairportList" placeholder="Origin" required>
-                                                <datalist id="OWOairportList"></datalist>
-                                                <button class="pos-swap">
-                                                    <i class="bi bi-arrow-left-right pl-1"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
-                                            <div class="form-group">
-                                                <i class="bi bi-geo-alt-fill position-absolute h2 icon-pos"></i>
-                                                <input type="text" class="form-control ps-5" id="onewayDestination"
-                                                    placeholder="Destination" list="OWDairportList" required>
-                                                <datalist id="OWDairportList"></datalist>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2">
-                                            <div class="form-control form-group d-flex">
-                                                <i class="bi bi-calendar3 position-absolute h2 icon-pos"></i>
-                                                <span class="dep-date-input">
-                                                    <input type="text" class="cal-input" placeholder="Depart Date"
-                                                        id="datepicker" required>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-6 col-xl-3 ps-0 mb-2 mb-lg-0 mb-xl-0 pe-0 pe-lg-2">
-                                            <div class="dropdown" id="myDD">
-                                                <button class="dropdown-toggle form-control" type="button"
-                                                    id="travellerInfoOneway" data-bs-toggle="dropdown"
-                                                    aria-expanded="false">
-                                                    <i
-                                                        class="bi bi-person-lines-fill position-absolute h2 icon-pos"></i>
-                                                    <span class="text-truncate" id="travellersInfo">1 Traveller(s),
-                                                        Economy </span>
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="travellerInfoOneway">
-                                                    <ul class="drop-rest">
-                                                        <li>
-                                                            <div class="d-flex">Select Adults</div>
-                                                            <div class="ms-auto input-group plus-minus-input">
-                                                                <div class="input-group-button">
-                                                                    <button type="button" class="circle"
-                                                                        data-quantity="minus" data-field="onewayAdult"
-                                                                        onclick="travellersHandler('minus')">
-                                                                        <i class="bi bi-dash"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <input class="input-group-field" type="text"
-                                                                    name="onewayAdult" value="0">
-                                                                <div class="input-group-button">
-                                                                    <button type="button" class="circle"
-                                                                        data-quantity="plus" data-field="onewayAdult"
-                                                                        onclick="travellersHandler('plus')">
-                                                                        <i class="bi bi-plus"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="d-flex">Select Child</div>
-                                                            <div class="ms-auto input-group plus-minus-input">
-                                                                <div class="input-group-button">
-                                                                    <button type="button" class="circle"
-                                                                        onclick="travellersHandler('minus')"
-                                                                        data-quantity="minus" data-field="onewayChild">
-                                                                        <i class="bi bi-dash"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <input class="input-group-field" type="text"
-                                                                    name="onewayChild" value="0">
-                                                                <div class="input-group-button">
-                                                                    <button type="button" class="circle"
-                                                                        onclick="travellersHandler('plus')"
-                                                                        data-quantity="plus" data-field="onewayChild">
-                                                                        <i class="bi bi-plus"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="d-flex">Select Infants</div>
-                                                            <div class="ms-auto input-group plus-minus-input">
-                                                                <div class="input-group-button"><button type="button"
-                                                                        class="circle"
-                                                                        onclick="travellersHandler('minus')"
-                                                                        data-quantity="minus" data-field="onewayInfant">
-                                                                        <i class="bi bi-dash "></i>
-                                                                    </button>
-                                                                </div>
-                                                                <input class="input-group-field" type="text"
-                                                                    name="onewayInfant" value="0">
-                                                                <div class="input-group-button ">
-                                                                    <button type="button" class="circle"
-                                                                        data-quantity="plus" data-field="onewayInfant"
-                                                                        onclick="travellersHandler('plus')">
-                                                                        <i class="bi bi-plus"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <label class="radio-inline">
-                                                                <input type="radio" name="class" value="Economy"
-                                                                    class="me-2" onclick="travellersHandler()">Economy
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="radio-inline">
-                                                                <input type="radio" name="class" value="Premium_Economy"
-                                                                    class="me-2" onclick="travellersHandler()">Premium
-                                                                Economy </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="radio-inline">
-                                                                <input type="radio" name="class" value="Business"
-                                                                    class="me-2" onclick="travellersHandler()">Business
-                                                            </label>
-                                                        </li>
-                                                        <li>
-                                                            <label class="radio-inline">
-                                                                <input type="radio" name="class" value="First"
-                                                                    class="me-2" onclick="travellersHandler()">First
-                                                                Class </label>
-                                                        </li>
-                                                        <li>
-                                                            <button type="button" class="btn btn"
-                                                                onclick="closeMenu()">Done</button>
-                                                        </li>
-                                                    </ul>
+                        <form action="flight-listing-oneway.html">
+                            <div id="oneway" class="tab-pane active">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="search-pan row mx-0 theme-border-radius">
+                                            <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                                <div class="dropdown" id="dropdownOrigin">
+
+                                                    <div class="form-group">
+                                                        <i class="bi bi-geo-alt-fill position-absolute h2 icon-pos"></i>
+                                                        <input type="text" class="form-control ps-5" id="onewayOrigin"
+                                                             placeholder="Origin" required>
+                                                        <ul class="dropdown-menu">
+
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-12 col-lg-6 col-xl-2 px-0 ">
-                                            <button type="submit " class="btn btn-search "
-                                                onclick="searchHandler();window.location.href='/flight-listing-oneway.html'">
-                                                <span class="fw-bold ">Search</span>
-                                            </button>
+                                            <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                                <div class="dropdown" id="dropdownDest">
+                                                    <div class="form-group">
+                                                        <i class="bi bi-geo-alt-fill position-absolute h2 icon-pos"></i>
+                                                        <input type="text" class="form-control ps-5"
+                                                            id="onewayDestination" placeholder="Destination"
+                                                             required>
+                                                        <ul class="dropdown-menu">
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div
+                                                class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-0 pe-xl-2">
+                                                <div class="form-control form-group d-flex">
+                                                    <i class="bi bi-calendar3 position-absolute h2 icon-pos"></i>
+                                                    <span class="dep-date-input">
+                                                        <input type="text" class="cal-input" placeholder="Depart Date"
+                                                            id="datepicker" required>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="col-12 col-lg-6 col-xl-3 ps-0 mb-2 mb-lg-0 mb-xl-0 pe-0 pe-lg-2">
+                                                <div class="dropdown" id="myDD">
+                                                    <button class="dropdown-toggle form-control" type="button"
+                                                        id="travellerInfoOneway" data-bs-toggle="dropdown"
+                                                        aria-expanded="false">
+                                                        <i
+                                                            class="bi bi-person-lines-fill position-absolute h2 icon-pos"></i>
+                                                        <span class="text-truncate" id="travellersInfo">1 Traveller(s),
+                                                            Economy </span>
+                                                    </button>
+                                                    <div class="dropdown-menu" aria-labelledby="travellerInfoOneway">
+                                                        <ul class="drop-rest">
+                                                            <li>
+                                                                <div class="d-flex">Select Adults</div>
+                                                                <div class="ms-auto input-group plus-minus-input">
+                                                                    <div class="input-group-button">
+                                                                        <button type="button" class="circle"
+                                                                            data-quantity="minus"
+                                                                            data-field="onewayAdult"
+                                                                            onclick="travellersHandler('minus')">
+                                                                            <i class="bi bi-dash"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                    <input class="input-group-field" type="text"
+                                                                        name="onewayAdult" value="0">
+                                                                    <div class="input-group-button">
+                                                                        <button type="button" class="circle"
+                                                                            data-quantity="plus"
+                                                                            data-field="onewayAdult"
+                                                                            onclick="travellersHandler('plus')">
+                                                                            <i class="bi bi-plus"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="d-flex">Select Child</div>
+                                                                <div class="ms-auto input-group plus-minus-input">
+                                                                    <div class="input-group-button">
+                                                                        <button type="button" class="circle"
+                                                                            onclick="travellersHandler('minus')"
+                                                                            data-quantity="minus"
+                                                                            data-field="onewayChild">
+                                                                            <i class="bi bi-dash"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                    <input class="input-group-field" type="text"
+                                                                        name="onewayChild" value="0">
+                                                                    <div class="input-group-button">
+                                                                        <button type="button" class="circle"
+                                                                            onclick="travellersHandler('plus')"
+                                                                            data-quantity="plus"
+                                                                            data-field="onewayChild">
+                                                                            <i class="bi bi-plus"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="d-flex">Select Infants</div>
+                                                                <div class="ms-auto input-group plus-minus-input">
+                                                                    <div class="input-group-button"><button
+                                                                            type="button" class="circle"
+                                                                            onclick="travellersHandler('minus')"
+                                                                            data-quantity="minus"
+                                                                            data-field="onewayInfant">
+                                                                            <i class="bi bi-dash "></i>
+                                                                        </button>
+                                                                    </div>
+                                                                    <input class="input-group-field" type="text"
+                                                                        name="onewayInfant" value="0">
+                                                                    <div class="input-group-button ">
+                                                                        <button type="button" class="circle"
+                                                                            data-quantity="plus"
+                                                                            data-field="onewayInfant"
+                                                                            onclick="travellersHandler('plus')">
+                                                                            <i class="bi bi-plus"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="class" value="Economy"
+                                                                        class="me-2"
+                                                                        onclick="travellersHandler()">Economy
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="class"
+                                                                        value="Premium_Economy" class="me-2"
+                                                                        onclick="travellersHandler()">Premium
+                                                                    Economy </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="class" value="Business"
+                                                                        class="me-2"
+                                                                        onclick="travellersHandler()">Business
+                                                                </label>
+                                                            </li>
+                                                            <li>
+                                                                <label class="radio-inline">
+                                                                    <input type="radio" name="class" value="First"
+                                                                        class="me-2" onclick="travellersHandler()">First
+                                                                    Class </label>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn btn"
+                                                                    onclick="closeMenu()">Done</button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-6 col-xl-1 px-0 ">
+                                                <button type="submit " class="btn btn-search "
+                                                    onclick="searchHandler()">
+                                                    <span class="fw-bold ">Search</span>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- <div class="col-12 mt-4 ">
+                                    <!-- <div class="col-12 mt-4 ">
                                     <div class="row ">
                                         <div class="col-12 ">
                                             <div class="form-check-inline ">
@@ -285,8 +316,9 @@
                                         </div>
                                     </div>
                                 </div> -->
+                                </div>
                             </div>
-                        </div>
+                        </form>
                         <!-- Return search -->
                         <div id="return" class="tab-pane fade">
                             <div class="row">
@@ -1465,7 +1497,8 @@
                                     <div class="col-12 col-md-12 mb-3">
                                         <div class="theme-box-shadow theme-border-radius px-4 py-4 theme-bg-white">
                                             <div class="row g-0" style="justify-content: space-around;">
-                                                <div class="col-12 overflow-hidden theme-border-radius" style="max-height: 500px;max-width: 500px;">
+                                                <div class="col-12 overflow-hidden theme-border-radius"
+                                                    style="max-height: 500px;max-width: 500px;">
                                                     <div class="overflow-hidden hoverShine">
                                                         <figure class="mb-0">
                                                             <img src="assets/images/thankyou.png" class="img-fluid"
@@ -1476,35 +1509,91 @@
                                                 <div class="col-12 col-md-6 mb-3 p-3">
                                                     <div class="row g-0">
                                                         <div class="col-12 overflow-hidden theme-border-radius">
-                                                            At FlightWorld, we are dedicated to our mission of assisting Ukraine
-                                                            and its refugees. With a strong sense of social responsibility, we
-                                                            have committed to using 10% of our resources to help those affected
+                                                            At FlightWorld, we are dedicated to our mission of assisting
+                                                            Ukraine
+                                                            and its refugees. With a strong sense of social
+                                                            responsibility, we
+                                                            have committed to using 10% of our resources to help those
+                                                            affected
                                                             by the country's conflict.
                                                             <br><br>
-                                                            Our primary focus is on providing humanitarian aid to refugees,
-                                                            which includes providing essential items such as food, clothing, and
+                                                            Our primary focus is on providing humanitarian aid to
+                                                            refugees,
+                                                            which includes providing essential items such as food,
+                                                            clothing, and
                                                             personal hygiene products. We take special care to support
-                                                            vulnerable groups, including children, the elderly, and people with
-                                                            disabilities, by offering tailored assistance that meets their
+                                                            vulnerable groups, including children, the elderly, and
+                                                            people with
+                                                            disabilities, by offering tailored assistance that meets
+                                                            their
                                                             specific needs.
                                                             <br><br>
-                                                            We take pride in the tangible impact our efforts have on refugees'
-                                                            lives and their ability to recover from difficult circumstances.
+                                                            We take pride in the tangible impact our efforts have on
+                                                            refugees'
+                                                            lives and their ability to recover from difficult
+                                                            circumstances.
                                                             <br><br>
-                                                            Our belief that every individual deserves support and the chance to
+                                                            Our belief that every individual deserves support and the
+                                                            chance to
                                                             build a better future drives us forward.
-                                                            As our work is ongoing, we pledge to continue our commitment to
-                                                            Ukraine and its refugees. The hope that we bring to their lives
-                                                            serves as a beacon of inspiration and confirms that our company is
+                                                            As our work is ongoing, we pledge to continue our commitment
+                                                            to
+                                                            Ukraine and its refugees. The hope that we bring to their
+                                                            lives
+                                                            serves as a beacon of inspiration and confirms that our
+                                                            company is
                                                             making a meaningful difference.
                                                         </div>
                                                     </div>
+                                                </div>
                                             </div>
-                                            </div>
-   
+
                                         </div>
                                     </div>
-   
+
+                                </div>
+
+                        </section>
+
+                        <section class="py-5 border-top" id="help">
+                            <div class="container">
+                                <div class="row my-5" data-aos="fade-down">
+                                    <div class="col-12">
+                                        <h1 class="h1 text-center fw-bold mb-3" style="text-transform: uppercase;">HOW I CAN HELP?
+                                        </h1>
+                                    </div>
+                                </div>
+                                <div class="row" data-aos="fade-up">
+                                    <!-- repetable -->
+                                    <div class="col-12 col-md-12 mb-3">
+                                        <div class="theme-box-shadow theme-border-radius px-4 py-4 theme-bg-white">
+                                            <div class="row g-0" style="justify-content: space-around; align-items: center;">
+                                                <div class="col-12 col-md-7 overflow-hidden theme-border-radius">
+                                                    <a href="https://u24.gov.ua/" target="_blank" rel="noopener noreferrer">
+                                                    <div class="overflow-hidden hoverShine">
+                                                        <figure class="mb-0">
+                                                            <img src="assets/images/freedom.png" class="img-fluid"
+                                                                alt="united24" title="Help UA">
+                                                        </figure>
+                                                    </div>
+                                                </a>
+                                                </div>
+                                                <div class="col-12 col-md-5 mb-3 p-3">
+                                                    <div class="row g-0">
+                                                        <a href="https://savelife.in.ua/" target="_blank" rel="noopener noreferrer">
+                                                        <div class="overflow-hidden hoverShine">
+                                                            <figure class="mb-0">
+                                                                <img src="assets/images/alive.png" class="img-fluid"
+                                                                    alt="FOR LIFE" title="Help UA soldiers">
+                                                            </figure>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
                                 </div>
 
                         </section>
@@ -1607,123 +1696,121 @@
                         </section>
 
                     </div> -->
+                    </div>
                 </div>
-            </div>
-                        <!-- page footer section -->
-                        <footer class="footer " id="footerSec ">
-                            <div class="container " data-aos="fade-up ">
-                                <div class="row ">
-                                    <div class="col-12 col-lg-6 pt-5 ">
-                                        <p class="text-justify pt-5 ">FlightWorld Travel Agent dashboard is a specialized
-                                            travel service
-                                            for organizations</p>
-                                        <p class="pt-lg-5 ">Get Latest Deals, Upcoming Flight Offers and Cheap Fare</p>
-                                        <form class="form ">
-                                            <div class="row ">
-                                                <div class="col-12 ">
-                                                    <div class="input-group ">
-                                                        <input type="text " class="form-control py-3 rounded-0 "
-                                                            id="inputPassword2 "
-                                                            placeholder="Enter your email address ">
-                                                        <button type="button "
-                                                            class="btn btn-outline-light rounded-0 custom-btn-subscribe btn-effect ">Subscribe</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <div class="col-12 mt-5 ">
-                                            <img src="assets/images/tafi.svg " class="img-fluid me-4 " alt="tafi "
-                                                title="tafi ">
-                                            <img src="assets/images/taai.svg " class="img-fluid " alt="taai "
-                                                title="taai ">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-6 pt-5 ">
-                                        <img src="assets/images/iata.svg " class="img-fluid d-inline-flex " alt="IATA "
-                                            title="IATA ">
-                                        <p class="fw-bold text-uppercase mb-0 ms-2 d-inline-flex ">We are an IATA
-                                            Certified
-                                            travel agency
-                                        </p>
-                                        <div class="row ">
-                                            <div class="col-md-4 mt-5 ">
-                                                <p class="text-uppercase fw-bold mb-4 ">About Us</p>
-                                                <ul class="fl-menu ">
-                                                    <li class="nav-item "><a href="#">About</a></li>
-                                                    <li class="nav-item "><a href="#">Contact us</a></li>
-                                                    <li class="nav-item "><a href="#">Bank Details</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-4 mt-5 ">
-                                                <p class="text-uppercase fw-bold ">Legal</p>
-                                                <ul class="fl-menu ">
-                                                    <li class="nav-item "><a href="#">Privacy</a></li>
-                                                    <li class="nav-item "><a href="#">T&C</a></li>
-                                                    <li class="nav-item "><a href="#">Disclaimer</a></li>
-                                                    <li class="nav-item "><a href="#">Privacy and Cookies</a></li>
-                                                    <li class="nav-item "><a href="#">Legal</a></li>
-                                                    <li class="nav-item "><a href="#">Help</a></li>
-                                                    <li class="nav-item "><a href="#">Feedback</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-4 mt-5 ">
-                                                <p class="text-uppercase fw-bold ">Company</p>
-                                                <ul class="fl-menu ">
-                                                    <li class="nav-item "><a href="#">Partner With Us</a></li>
-                                                    <li class="nav-item "><a href="#">Services</a></li>
-                                                    <li class="nav-item "><a href="#">Careers</a></li>
-                                                    <li class="nav-item "><a href="#">Products</a></li>
-                                                </ul>
+                <!-- page footer section -->
+                <footer class="footer " id="footerSec ">
+                    <div class="container " data-aos="fade-up ">
+                        <div class="row ">
+                            <div class="col-12 col-lg-6 pt-5 ">
+                                <p class="text-justify pt-5 ">FlightWorld Travel Agent dashboard is a specialized
+                                    travel service
+                                    for organizations</p>
+                                <p class="pt-lg-5 ">Get Latest Deals, Upcoming Flight Offers and Cheap Fare</p>
+                                <form class="form ">
+                                    <div class="row ">
+                                        <div class="col-12 ">
+                                            <div class="input-group ">
+                                                <input type="text " class="form-control py-3 rounded-0 "
+                                                    id="inputPassword2 " placeholder="Enter your email address ">
+                                                <button type="button "
+                                                    class="btn btn-outline-light rounded-0 custom-btn-subscribe btn-effect ">Subscribe</button>
                                             </div>
                                         </div>
                                     </div>
+                                </form>
+                                <div class="col-12 mt-5 ">
+                                    <img src="assets/images/tafi.svg " class="img-fluid me-4 " alt="tafi "
+                                        title="tafi ">
+                                    <img src="assets/images/taai.svg " class="img-fluid " alt="taai " title="taai ">
                                 </div>
-                                <div class="row g-0 pt-5 ">
-                                    <div class="col-12 border-top border-bottom ">
-                                        <div class="row ">
-                                            <div class="col-12 col-lg-4 text-start py-3 ">
-                                                <p class="d-inline-flex text-uppercase mb-0 ">Follow Us</p>
-                                                <div class="d-inline-flex social ">
-                                                    <a href="#" class="ps-3 "><i class="bi bi-facebook "></i></a>
-                                                    <a href="#" class="ps-3 "><i class="bi bi-twitter "></i></a>
-                                                    <a href="#" class="ps-3 "><i class="bi bi-linkedin "></i></a>
-                                                    <a href="#" class="ps-3 "><i class="bi bi-instagram "></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-lg-4 text-lg-end social py-3 ">
-                                                <a href="mailto:support@flightworld.top"
-                                                    class="botom-link ">support@flightworld.top</a>
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="col-12 col-lg-6 pt-5 ">
+                                <img src="assets/images/iata.svg " class="img-fluid d-inline-flex " alt="IATA "
+                                    title="IATA ">
+                                <p class="fw-bold text-uppercase mb-0 ms-2 d-inline-flex ">We are an IATA
+                                    Certified
+                                    travel agency
+                                </p>
+                                <div class="row ">
+                                    <div class="col-md-4 mt-5 ">
+                                        <p class="text-uppercase fw-bold mb-4 ">About Us</p>
+                                        <ul class="fl-menu ">
+                                            <li class="nav-item "><a href="#">About</a></li>
+                                            <li class="nav-item "><a href="#">Contact us</a></li>
+                                            <li class="nav-item "><a href="#">Bank Details</a></li>
+                                        </ul>
                                     </div>
-                                    <div class="col-12 ">
-                                        <p class="text-center py-5 mb-0 font-small ">©2023 FlightWorld Pwt Lcd. All Rights
-                                            Reserved.
-                                        </p>
+                                    <div class="col-md-4 mt-5 ">
+                                        <p class="text-uppercase fw-bold ">Legal</p>
+                                        <ul class="fl-menu ">
+                                            <li class="nav-item "><a href="#">Privacy</a></li>
+                                            <li class="nav-item "><a href="#">T&C</a></li>
+                                            <li class="nav-item "><a href="#">Disclaimer</a></li>
+                                            <li class="nav-item "><a href="#">Privacy and Cookies</a></li>
+                                            <li class="nav-item "><a href="#">Legal</a></li>
+                                            <li class="nav-item "><a href="#">Help</a></li>
+                                            <li class="nav-item "><a href="#">Feedback</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4 mt-5 ">
+                                        <p class="text-uppercase fw-bold ">Company</p>
+                                        <ul class="fl-menu ">
+                                            <li class="nav-item "><a href="#">Partner With Us</a></li>
+                                            <li class="nav-item "><a href="#">Services</a></li>
+                                            <li class="nav-item "><a href="#">Careers</a></li>
+                                            <li class="nav-item "><a href="#">Products</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                            <p id="back-top " class="back-to-top bg-dark " style="display:block;">
-                                <a href="#top"><i class="bi bi-chevron-up "></i></a>
-                            </p>
-                        </footer>
-
+                        </div>
+                        <div class="row g-0 pt-5 ">
+                            <div class="col-12 border-top border-bottom ">
+                                <div class="row ">
+                                    <div class="col-12 col-lg-4 text-start py-3 ">
+                                        <p class="d-inline-flex text-uppercase mb-0 ">Follow Us</p>
+                                        <div class="d-inline-flex social ">
+                                            <a href="#" class="ps-3 "><i class="bi bi-facebook "></i></a>
+                                            <a href="#" class="ps-3 "><i class="bi bi-twitter "></i></a>
+                                            <a href="#" class="ps-3 "><i class="bi bi-linkedin "></i></a>
+                                            <a href="#" class="ps-3 "><i class="bi bi-instagram "></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-4 text-lg-end social py-3 ">
+                                        <a href="mailto:support@flightworld.top"
+                                            class="botom-link ">support@flightworld.top</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 ">
+                                <p class="text-center py-5 mb-0 font-small ">©2023 FlightWorld Pwt Lcd. All Rights
+                                    Reserved.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                    <p id="back-top " class="back-to-top bg-dark " style="display:block;">
+                        <a href="#top"><i class="bi bi-chevron-up "></i></a>
+                    </p>
+                </footer>
+
+            </div>
 
 
-                    <!-- Option 1: Bootstrap Bundle with Popper -->
-                    <script src="assets/js/bootstrap.bundle.min.js "></script>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
-                    <!--This page JavaScript -->
-                    <script src="assets/js/owl.carousel.min.js "></script>
-                    <!--Data Calendar js -->
-                    <script src="assets/js/jquery-ui.js "></script>
-                    <!--Traveler counter js -->
-                    <script src="assets/js/counter.js "></script>
-                    <!-- animation aos library -->
-                    <script src="assets/js/aos.js "></script>
-                    <script src="assets/js/main.js "></script>
-                    <script src="assets/js/searchForm.js "></script>
+            <!-- Option 1: Bootstrap Bundle with Popper -->
+            <script src="assets/js/bootstrap.bundle.min.js "></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
+            <!--This page JavaScript -->
+            <script src="assets/js/owl.carousel.min.js "></script>
+            <!--Data Calendar js -->
+            <script src="assets/js/jquery-ui.js "></script>
+            <!--Traveler counter js -->
+            <script src="assets/js/counter.js "></script>
+            <!-- animation aos library -->
+            <script src="assets/js/aos.js "></script>
+            <script src="assets/js/main.js "></script>
+            <script src="assets/js/searchForm.js "></script>
 </body>
 
 </html>
