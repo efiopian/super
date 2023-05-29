@@ -1,7 +1,6 @@
 const placeholderElement = document.createElement('div');
 placeholderElement.classList.add("flight-placeholder")
 placeholderElement.innerHTML = `
-
   <div class="flight-details"></div>
   <div class="flight-details"></div>
   <div class="flight-details"></div>
@@ -17,6 +16,7 @@ container.appendChild(placeholderElement);
 
 const API_KEY = '6454fd47cf9a27e29dd12b36';
 const FLIGHTS_API_URL = `https://api.flightapi.io/onewaytrip/${API_KEY}`;
+
 // Fetch data from the API
 
 let onewayOrigin = localStorage.getItem('onewayOrigin');
@@ -55,8 +55,8 @@ let datai;
 function fetchFlights() {
     fetch(url)
         .then(response => {
-            if(response.status === "404"){ throw new Error(respone.json())}
-            else{
+            if (response.status === "404") { throw new Error(respone.json()) }
+            else {
                 return response.json()
             }
         })
@@ -92,6 +92,10 @@ function fetchFlights() {
                     const airline = data.airlines.filter(al => al.code === leg.airlineCodes[0])[0].name;
                     element.dataset.ticketprice = flightFare.price.amount;
                     element.dataset.legid = leg.id;
+                    element.dataset.depTime = leg.departureTime;
+                    element.dataset.duration = leg.duration;
+                    element.dataset.stops = leg.stopoversCount ? leg.stopoversCount + " stop(s)" : "Non Stop";
+                    element.dataset.arrTime = leg.arrivalTime;
                     const bort = leg.id.split(':')[1];
                     element.innerHTML = `
             <div class="row g-0 border theme-border-radius theme-box-shadow p-2 align-items-center theme-bg-white">
@@ -127,7 +131,6 @@ function fetchFlights() {
                 <button type="submit" class="btn-select btn btn-effect" 
                 onclick="onSelectFlight(event);window.location.href='traveller-details.html';"
                 // onclick="window.location.href='review-booking.html';"
-                
                 >
                     <span class="font-small">Select</span>
                 </button>
@@ -152,11 +155,8 @@ function fetchFlights() {
 
         })
         .catch(error => {
-            container.removeChild(placeholderElement);
-            const error = document.createElement('div');
-            error.classList.add("alert", "alert-danger", "mt-3", "error")
-            error.innerText = "Sorry, there was an issue. Please try changing the date or try again later. "
-            container.appendChild(error)        });
+            console.log(error);
+        });
 
 }
 
@@ -169,6 +169,9 @@ function onSelectFlight(event) {
     // Do something with the parent element
     localStorage.setItem("price", parentElement.dataset.ticketprice);
     localStorage.setItem("selectedLeg", parentElement.dataset.legid);
-
+    localStorage.setItem("depTime", parentElement.dataset.depTime);
+    localStorage.setItem("duration", parentElement.dataset.duration);
+    localStorage.setItem("stops", parentElement.dataset.stops);
+    localStorage.setItem("arrTime", parentElement.dataset.arrTime);
     // console.log(parentElement);    
 }
